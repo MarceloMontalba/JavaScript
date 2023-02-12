@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="../cdn/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <div class="h-100 w-100 d-flex align-items-center" id="contenido-app">
+    <div class="container" id="contenedor">
+      <div class="row d-flex justify-content-center">
+        
+        <div class="col-12 col-md-6">
+          <form id="buscar-recordatorios">
+              <div class="row">
+                <div class="col-8">
+                  <input type="text" class="form-control" name="input-busqueda" placeholder="Buscar recordatorio...">
+                </div>
+                <div class="col-4">
+                  <a class="btn btn-outline-primary" id="btn-buscar"> 
+                    <i class="fa-solid fa-magnifying-glass"></i> Buscar
+                  </a>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+
+      <div class="row mt-4 d-flex justify-content-center">
+        <div class="col-12 col-md-8 col-lg-7 container-fluid">
+          <div class="row container-fluid">
+            <a href="./html/formulario_recordatorio.html" class="btn btn-success col-7 col-sm-8 col-lg-6 col-xl-4">
+              <i class="fa-sharp fa-solid fa-plus"></i> Crear nuevo recordatorio
+            </a>
+
+            <div class="row contenedor-recordatorios"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--ventana para eliminar algun recordatorio-->
+  <div class="h-100 w-100 d-flex align-items-center justify-content-center" id="contenido-eliminar">
+    <div class="card">
+      <div class="card-header bg-danger">
+        <h6 style="color:white">¿Está seguro que desea eliminar este recordatorio?</h6>
+      </div>
+
+      <div class="card-body container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <a class="btn btn-success" style="margin: 5px" id="confirmar-eliminacion">
+              <i class="fa-solid fa-check"></i> Si
+            </a>
+            
+            <a class="btn btn-danger" style="margin: 5px" id="cancelar-eliminacion">
+              <i class="fa-solid fa-xmark"></i> No
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Scripts-->
+  <script src="../cdn/jquery-3.6.3.min.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
