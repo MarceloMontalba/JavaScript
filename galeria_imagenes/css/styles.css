@@ -1,0 +1,33 @@
+body{
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+#container{
+    width: 850px;
+    margin: 150px auto;
+}
+
+#container img{
+    cursor: pointer;
+}
+
+#img-previa{
+    background: rgba(0,0,0,0.5);
+    display: none;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+#img-previa div{
+    margin: 30px auto;
+    width: 381px;
+}
+
+#img-completa{
+    height: 700px;
+}
