@@ -1,0 +1,27 @@
+body{
+  position: relative;
+  background-image: url("../img/fondo.jpg");
+  background-color: black;
+  background-size: 1600px 900px;
+  background-repeat: no-repeat;
+}
+
+.rana{
+  cursor: pointer;
+}
+
+.contenedor-piedras{
+  position: absolute;
+  top: 480px;
+  left: 240px;
+  z-index: 0;
+  width: 1100px;
+}
+
+.contenedor-ranas{
+  position: absolute;
+  top: 560px;
+  left: 240px;
+  z-index: 1;
+  width: 1100px;
+}
