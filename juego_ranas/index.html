@@ -5,41 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego</title>
-    <link rel="stylesheet" href="../cdn/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pushy-buttons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
   <div class="contenedor">
     <!--Contiene las imagenes de las piedras-->
     <div class="contenedor-piedras">
-      <img src="img/piedra.png" width="150px" class="piedra">
-      <img src="img/piedra.png" width="150px" class="piedra">
-      <img src="img/piedra.png" width="150px" class="piedra">
-      <img src="img/piedra.png" width="150px" class="piedra">
-      <img src="img/piedra.png" width="150px" class="piedra">
-      <img src="img/piedra.png" width="150px" class="piedra">
-      <img src="img/piedra.png" width="150px" class="piedra">
+      <img src="img/piedra.png" class="piedra">
+      <img src="img/piedra.png" class="piedra">
+      <img src="img/piedra.png" class="piedra">
+      <img src="img/piedra.png" class="piedra">
+      <img src="img/piedra.png" class="piedra">
+      <img src="img/piedra.png" class="piedra">
+      <img src="img/piedra.png" class="piedra">
     </div>
 
     <!--Contiene las imagenes de las ranas-->
     <div class="contenedor-ranas">
-      <img src="img/rana_1.png" id="1" width="150px" class="rana">
-      <img src="img/rana_1.png" id="2" width="150px" class="rana">
-      <img src="img/rana_1.png" id="3" width="150px" class="rana">
-      <img width="150px" style="visibility: hidden;">
-      <img src="img/rana_2.png" id="4" width="150px" class="rana">
-      <img src="img/rana_2.png" id="5" width="150px" class="rana">
-      <img src="img/rana_2.png" id="6" width="150px" class="rana">
+      <img src="img/rana_1.png" id="0" class="rana">
+      <img src="img/rana_1.png" id="1" class="rana">
+      <img src="img/rana_1.png" id="2" class="rana">
+      <img src="img/rana_1.png" id="3" class="rana" style="visibility: hidden;">
+      <img src="img/rana_2.png" id="4" class="rana">
+      <img src="img/rana_2.png" id="5" class="rana">
+      <img src="img/rana_2.png" id="6" class="rana">
     </div>
   </div>
   
+  <!--Contiene el boton de reseteo de juego-->
+  <div class="recarga">
+    <img src="img/recarga.png" width="50px">
+  </div>
+
+  <div class="contenedor-ganador">
+    <img src="img/ganador.png" width="500px">
+    <br>
+    <button class="pushy__btn pushy__btn--sm btn-recargar">Volver a jugar</button>
+  </div>
+  
   <!--Audio de fondo en ciclo-->
-  <audio autoplay loop>
-    <source src="sounds/ambiente.mp3"></source>
+  <audio id="sonido-fondo" loop autoplay> 
+    <source src="sounds/ambiente.mp3" type="audio/mp3">
   </audio>
 
   <!--Scripts-->
-  <script src="../cdn/jquery-3.6.3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
   <script src="scripts/app.js"></script>
 </body>
 </html>
