@@ -1,0 +1,17 @@
+body{
+    background-color: #d1d1d1;
+}
+
+@font-face {
+    font-family: "MarcellusSC";
+    src: url("./fonts/MarcellusSC-Regular.ttf");
+}
+
+.mi-nav{
+    font-family: MarcellusSC;
+    background-color: #407a3e !important;
+}
+
+.nav-link{
+    font-size: 1.1em;
+}
