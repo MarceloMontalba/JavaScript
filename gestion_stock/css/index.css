@@ -1,0 +1,25 @@
+.mi-canvas{
+    height: 100vh;
+    background-color: #d1d1d1;
+    overflow-y: auto;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("fonts/BebasNeue-Regular.ttf");
+}
+
+.titulo{
+    background-color: #407a3e;
+    color: white;
+    font-family: BebasNeue;
+    font-size: 1.3em;
+}
+
+.tarjeta{
+    box-shadow: 1px 3px 5px black;
+}
+
+a{
+    color: white !important;
+}
