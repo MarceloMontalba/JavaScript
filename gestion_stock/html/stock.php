@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/styles.css">
-  <title>Proveedores</title>
+  <title>Gestion de Stock</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mt-2 mr-4 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#" style="font-size: 1.3em">
+          <a class="nav-link active" href="#" style="font-size: 1.3em">
             <i class="fa-solid fa-cart-flatbed"></i> Gestión de Stock
           </a>
         </li>
@@ -33,7 +33,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link" href="#">
             <i class="fa-solid fa-handshake"></i> Proveedores
           </a>
         </li>

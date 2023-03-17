@@ -12,6 +12,25 @@ body{
     background-color: #407a3e !important;
 }
 
+.nav-item{
+    cursor: pointer;
+}
+
 .nav-link{
     font-size: 1.1em;
+}
+
+table, th, td{
+    border: 1px solid #969393;
+}
+
+th{
+    background-color: #407a3e;
+    color: white;
+    padding: 10px;
+}
+
+td{
+    background-color: #f5f2f2;
+    padding: 8px;
 }

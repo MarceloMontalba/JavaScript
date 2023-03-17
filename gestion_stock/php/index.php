@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/styles.css">
-  <title>Proveedores</title>
+  <title>Gestion de Stock</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mt-2 mr-4 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#" style="font-size: 1.3em">
+          <a class="nav-link active" style="font-size: 1.3em" id="boton-stock">
             <i class="fa-solid fa-cart-flatbed"></i> Gestión de Stock
           </a>
         </li>
@@ -28,18 +28,13 @@
 
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item mr-2">
-          <a class="nav-link" href="#">
-            <i class="fa-sharp fa-solid fa-box"></i> Productos 
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link" id="boton-proveedores">
             <i class="fa-solid fa-handshake"></i> Proveedores
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link">
             <i class="fa-solid fa-users"></i> Usuarios
           </a>
         </li>
@@ -57,13 +52,14 @@
 
   <!--Contenido-->
   <div class="container-fluid">
-    <div class="row">
-        
+    <div class="row contenido-pagina d-flex justify-content-center">
+      <?php include("consultas/productos.php"); ?>
     </div>
   </div>
 
   <!--Scripts-->
   <script src="../scripts/jquery-3.6.3.js"></script>
   <script src="../scripts/bootstrap.min.js"></script>
+  <script src="../scripts/app.js"></script>
 </body>
 </html>
