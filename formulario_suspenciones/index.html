@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suspenciones/Renuncia Estudiantil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="./css/formulario.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 
+  <p>FORMULARIO DE SUSPENSIÓN DE BENEFICIOS ESTUDIANTILES 2023</p>
+  <p>Este formulario es para realizar el proceso de SUSPENSIÓN de tus Beneficios Estudiantiles MINEDUC.
+    Si tienes Gratuidad, Becas o FSCU y no vas a estudiar el segundo semestre, entonces debes de REALIZAR Este
+    proceso para que Mineduc suspenda tu beneficio y lo puedas renovar cuando vuelvas a estudiar.
+  </p> 
+-->
+  <article class="contenedor">
+    <form action="" class="formulario-solicitud" id="formulario-solicitud">
+      <section class="formulario-header">
+        <div class="contenedor-logo">
+          <img src="./img/Logo_dir_bienestar_estudiantil.png" class="logo-universidad">
+        </div>
+        <div class="contenedor-formulario-titulo">
+          <h1 class="formulario-titulo">Formulario de Suspensión de Beneficios Estudiantiles</h1>
+        </div>
+        <ul class="barra-progreso">
+          <li class="barra-progreso-opcion barra-progreso-opcion-activo">paso 1</li>
+          <li class="barra-progreso-opcion">paso 2</li>
+          <li class="barra-progreso-opcion">paso 3</li>
+          <li class="barra-progreso-opcion">paso 4</li>
+          <li class="barra-progreso-opcion">paso 5</li>
+          <li class="barra-progreso-opcion">paso 6</li>
+          <li class="barra-progreso-opcion">paso 7</li>
+        </ul>
+      </section>
+
+      <section class="formulario-body">
+        <div class="paso paso-activo" id="paso-1">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Datos Personales (Paso 1)</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <label for="paso-rut">Rut (Sin puntos, ni dígito verificador):</label>
+              <input type="text" name="paso-rut" id="paso-rut" placeholder="Ejemplo: 20391234">
+            </div>
+            <div class="paso-info">
+              <label for="paso-nombres">Nombres:</label>
+              <input type="text" name="paso-nombres" id="paso-nombres" placeholder="Ejemplo: Juan Antonio">
+            </div>
+            <div class="paso-info">
+              <label for="paso-apellido-p">Apellido Paterno:</label>
+              <input type="text" name="paso-apellido-p" id="paso-apellido-p" placeholder="Ejemplo: Pérez">
+            </div>
+            <div class="paso-info">
+              <label for="paso-apellido-m">Apellido Materno:</label>
+              <input type="text" name="paso-apellido-m" id="paso-apellido-m" placeholder="Ejemplo: Gonzáles">
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="2" data-step="1">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </section>
+        </div>
+
+        <div class="paso" id="paso-2">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Datos Académicos (Paso 2)</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <label for="paso-carrera-actual">Carrera actual en la UCTemuco:</label>
+              <input type="text" name="paso-carrera-actual" id="paso-carrera-actual" placeholder="Ejemplo: Geologia">
+            </div>
+            <div class="paso-info">
+              <label for="paso-anno-ingreso">Año de ingreso a la carrera:</label>
+              <input type="text" name="paso-anno-ingreso" id="paso-anno-ingreso" placeholder="Ejemplo: 2023">
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="1" data-step="2">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="2">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </section>
+        </div>
+
+        <div class="paso" id="paso-3">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Datos de la suspensión o renuncia (Paso 3)</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <label for="paso-rut">Período a suspender:</label>
+              <input type="text" name="paso-rut" id="paso-rut" placeholder="Ejemplo: 20391234">
+            </div>
+            <div class="paso-info">
+              <label for="paso-nombres">Motivo de la suspensión:</label>
+              <input type="text" name="paso-nombres" id="paso-nombres" placeholder="Ejemplo: Juan Antonio">
+            </div>
+            <div class="paso-info">
+              <label for="paso-apellido-p">Beneficios a suspender:</label>
+              <input type="text" name="paso-apellido-p" id="paso-apellido-p" placeholder="Ejemplo: Pérez">
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="2" data-step="3">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="4" data-step="3">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </section>
+        </div>
+
+        <div class="paso" id="paso-4">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Carga de formulario MINEDUC (Paso 4)</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <p>Al suspender tus beneficios, es necesario que adjuntes el Formulario de Suspensión del MINEDUC.</p>
+
+              <h4 class="paso-subtitulo paso-aviso">IMPORTANTE</h4>
+              <p class="paso-parrafo">Completa el formulario de suspensión de beneficios estudiantiles del MINEDUC con letra legible (documento
+                adjunto). Esto aplica <b>SOLO</b> a estudiantes que cuentan con beca de arancel. Debes llenar el formulario hasta donde
+                se solicita tu firma y la fecha de solicitud.
+              </p>
+              <p class="paso-parrafo">
+                Considera lo siguiente al completar el formulario:
+                <ul>
+                  <li>El correo electrónico debe ser obligatoriamente el correo institucional.</li>
+                  <li>Marca solo el beneficio que esté vigente.</li>
+                  <li>La firma debe ir directamente en el formulario, no puede ser con imágenes sobrepuestas
+                    o recortes de otros documentos.
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="4">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="5" data-step="4">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </section>
+        </div>
+
+        <div class="paso" id="paso-5">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Carga de formulario MINEDUC (Paso 4)</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <h4 class="paso-aviso">Formulario que debe llenar</h4>
+              <p class="contenedor-imagen-suspensiones">
+                <img src="img/formulario_suspensiones_1.png" class="imagen-formulario-suspension">
+                <img src="img/formulario_suspensiones_2.png" class="imagen-formulario-suspension">
+              </p>
+              <p class="subtexto-imagen">Archivo enviado desde email Bienestar Estudiantil.</p>
+
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="4">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="6" data-step="5">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+        </div>
+
+        <div class="paso" id="paso-6">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Carga de formulario MINEDUC (Paso 4)</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <h4 class="paso-aviso">Adjuntar formulario MINEDUC</h4>
+              <p>Tener en consideración:
+                <ul>
+                  <li>El formato del archivo debe de ser PDF.</li>
+                  <li>El nombre del archivo debe contener el formato <b>RUT-Formulario.pdf</b>, 
+                    como por ejemplo: <b>11222333-Formulario.pdf</b></li>
+                </ul>
+              </p>
+              <input type="file" accept=".pdf">
+
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="4">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+            <button type="submit" class="paso-boton paso-boton-confirmar">
+              <i class="fa-solid fa-share-from-square"></i> Enviar Solicitud</button>
+          </section>
+        </div>
+      </section>
+    </form>
+  </article>
+
+  <script src="./js/formulario.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+@font-face {
+  font-family: "PTSans";
+  src: url(fuentes/PTSansNarrow-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Fira";
+  src: url(fuentes/FiraSansCondensed-Regular.ttf);
+}
+
+@font-face {
+  font-family: Abel;
+  src: url(fuentes/Abel-Regular.ttf);
+}
+
+@font-face {
+  font-family: Patua;
+  src: url(fuentes/PatuaOne-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Contenedor Principal*/
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Formulario */
+.formulario-solicitud {
+  padding: 1.5rem;
+  max-width: 600px;
+}
+
+/* Header del formmulario */
+.contenedor-logo {
+  width: 100%;
+  display: flex;
+}
+
+.logo-universidad {
+  width: 25rem;
+  margin: auto;
+  margin-bottom: .05rem;
+  pointer-events: none;
+}
+
+/* Barra Progreso */
+.barra-progreso {
+  display: flex;
+  list-style: none;
+  margin-bottom: 20px;
+  counter-reset: step;
+  padding: 0;
+  cursor: default;
+}
+
+.barra-progreso-opcion {
+  width: 100%;
+  text-align: center;
+  font-size: .9rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.barra-progreso-opcion:before {
+  display: flex;
+  content: counter(step);
+  counter-increment: step;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0px 0px 8px #827f7f;
+  background-color: white;
+  margin: 0 auto 5px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.barra-progreso-opcion:after {
+  display: block;
+  content: '';
+  height: 2px;
+  width: 170px;
+  box-shadow: 0px 0px 8px #827f7f;
+  background-color: white;
+  position: absolute;
+  top: 17px;
+  left: -50%;
+  z-index: 1;
+}
+
+.barra-progreso-opcion:first-child:after {
+  content: none;
+}
+
+.barra-progreso-opcion.barra-progreso-opcion-activo:before {
+  content: '✔';
+}
+
+.barra-progreso-opcion.barra-progreso-opcion-activo:before, 
+.barra-progreso-opcion.barra-progreso-opcion-activo:after {
+  background-color: #ffb505;
+}
+
+/* Titulo del formulario */
+.contenedor-formulario-titulo {
+  padding: 0 10px;
+}
+
+.formulario-titulo {
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: PTSans;
+}
+
+/* Cuerpo del formulario */
+.formulario-body {
+  display: flex;
+  align-items: flex-start;
+}
+/* Confifguracion de pasos */
+.paso {
+  background-color: white;
+  box-shadow: 0px 0px 40px #827f7f;
+  min-width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: all .3s linear;
+}
+
+.paso-activo {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.paso-izquierda {
+  margin-left: -100%;
+}
+
+.paso-derecha {
+  margin-left: 100%;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform:scale(1.03);
+  }
+}
+
+.paso-inactivo {
+  animation-name: scale;
+  animation-duration: .2s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+.paso-header {
+  padding: 15px 15px;
+  background-color: #007bbe;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.paso-body {
+  padding-top: 8px;
+}
+
+.paso-titulo {
+  margin: 0;
+  font-family: PTSans;
+  font-size: 1.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.paso-info {
+  padding: 10px 30px;
+}
+
+.paso-info > *{
+  display: block;
+}
+
+.paso-info label{
+  font-family: Fira;
+  font-size: 1rem;
+  margin-bottom: 7px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.paso-info input[type="text"]{
+  padding: 8px 16px;
+  border-radius: 15px;
+  border: 1px solid #bdc5c9;
+  width: 90%;
+  font-family: Patua;
+  font-size: 1rem;
+}
+
+.paso-info input[type="text"]:focus {
+  box-shadow: 0 0 15px #007bbe;
+  border: 1px solid #059ced;
+  outline: none;
+}
+
+.paso-footer {
+  margin-top: 10px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.paso-footer button {
+  width: 100%;
+  margin: 8px 5px 30px;
+}
+
+.paso-boton {
+  border-radius: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: block;
+  font-family: Fira;
+  font-size: .9rem;
+  transition: all .2s ease;
+}
+
+.paso-boton-siguiente {
+  background-color: #007bbe;
+  color:white;
+  border: 1px solid #0086cf;
+}
+
+.paso-boton-siguiente:hover {
+  box-shadow: 0 0 10px #007bbe;
+}
+
+.paso-boton-regresar {
+  background-color: #007bbe;
+  color:white;
+  border: 1px solid #0086cf;
+}
+
+.paso-boton-regresar:hover {
+  box-shadow: 0 0 10px #007bbe;
+}
+
+.paso-boton-confirmar {
+  background-color: #2f9923;
+  color:white;
+  border: 1px solid #31a324;
+}
+
+.paso-boton-confirmar:hover {
+  box-shadow: 0 0 10px #2f9923;
+}
+
+/* Texto en formulario */
+.paso-aviso {
+  font-family: Fira;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  color: #ab0909;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.paso-parrafo {
+  text-align: justify;
+  margin-top: 0;
+}
+
+/* Imagen formulario suspension */
+.contenedor-imagen-suspensiones{
+  width: 100%;
+  display: flex;
+  margin-top: .5rem;
+  justify-content: center;
+}
+
+.imagen-formulario-suspension {
+  width: 16rem;
+  height: 21rem;
+  border: 2px solid black;
+  margin: .3rem;
+}
+
+.subtexto-imagen{
+  text-align: center;
+  font-style: italic;
+}
+
+/* Controlador de Archivos */
+.paso-info input[type="file"]{
+  padding: 8px 16px;
+  border-radius: 15px;
+  border: 1px solid #bdc5c9;
+  width: 90%;
+  font-family: Patua;
+  font-size: 1rem;
+  cursor: pointer;
+}
