@@ -38,6 +38,129 @@
       <section class="formulario-body">
         <div class="paso paso-activo" id="paso-1">
           <section class="paso-header">
+            <h2 class="paso-titulo">Solicitudes de estudiantes</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <p class="paso-parrafo">
+                En esta sección encontrarás el formulario mediante el cual puedes hacer una solicitud de 
+                <b>Reincorporación</b>, <b>Suspensión</b> o <b>Renuncia</b>. Además puedes consultar 
+                el estado en que se encuentra tu solicitud.
+              </p>
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="2" data-step="1">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </section>
+        </div>
+
+        <div class="paso" id="paso-2">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Información de la solicitud</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <label for="paso-carrera-actual">Tipo de Solicitud</label>
+              <input type="text" name="paso-carrera-actual" id="paso-carrera-actual" placeholder="Ejemplo: Geologia">
+            </div>
+
+            <div class="paso-info">
+              <label for="paso-carrera-actual">Fecha Solicitud</label>
+              <input type="text" name="paso-carrera-actual" id="paso-carrera-actual" placeholder="Ejemplo: Geologia">
+            </div>
+
+            <div class="paso-info">
+              <label for="paso-carrera-actual">Semestre/Año solicitud</label>
+              <input type="text" name="paso-carrera-actual" id="paso-carrera-actual" placeholder="Ejemplo: Geologia">
+            </div>
+
+            <div class="paso-info">
+              <label for="paso-carrera-actual">Periodo a tramitar</label>
+              <input type="text" name="paso-carrera-actual" id="paso-carrera-actual" placeholder="Ejemplo: Geologia">
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="1" data-step="2">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="2">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </section>
+        </div>
+
+        <div class="paso" id="paso-3">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Motivos de la Solicitud</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <label for="paso-carrera-actual">Motivos</label>
+              <input type="text" name="paso-carrera-actual" id="paso-carrera-actual" placeholder="Ejemplo: Geologia">
+            </div>
+
+            <div class="paso-info">
+              <label for="paso-carrera-actual">Descripción del Motivo</label>
+              <input type="text" name="paso-carrera-actual" id="paso-carrera-actual" placeholder="Ejemplo: Geologia">
+            </div>
+
+            <div class="paso-info">
+              <label for="paso-carrera-actual">Detalle del Motivo</label>
+              <input type="text" name="paso-carrera-actual" id="paso-carrera-actual" placeholder="Ejemplo: Geologia">
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="2" data-step="3">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="4" data-step="3">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </section>
+        </div>
+
+        <div class="paso" id="paso-4">
+          <section class="paso-header">
+            <h2 class="paso-titulo">Aviso</h2>
+          </section>
+          
+          <section class="paso-body">
+            <div class="paso-info">
+              <h4 class="paso-subtitulo paso-aviso">Importante</h4>
+
+              <p class="paso-parrafo">En esta sección podrás realizar el proceso de SUSPENSIÓN de tus Beneficios Estudiantiles MINEDUC.
+                Si tienes Gratuidad, Becas o FSCU y no vas a estudiar el segundo semestre, entonces debes de REALIZAR Este
+                proceso para que Mineduc suspenda tu beneficio y lo puedas renovar cuando vuelvas a estudiar.
+              </p> 
+              <p class="paso-parrafo">
+                <b>SOLO</b> podrás llenar una vez este apartado del formulario y este no puede ser modificado una vez enviado. 
+              </p>
+            </div>
+          </section>
+
+          <section class="paso-footer">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="3" data-step="4">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="5" data-step="4">
+              Continuar <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </section>
+        </div>
+
+        <div class="paso" id="paso-5">
+          <section class="paso-header">
             <h2 class="paso-titulo">Datos Personales (Paso 1)</h2>
           </section>
           
@@ -61,13 +184,17 @@
           </section>
 
           <section class="paso-footer">
-            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="2" data-step="1">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="4" data-step="5">
+              <i class="fa-solid fa-caret-left"></i> Regresar
+            </button>
+
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="6" data-step="5">
               Continuar <i class="fa-solid fa-caret-right"></i>
             </button>
           </section>
         </div>
 
-        <div class="paso" id="paso-2">
+        <div class="paso" id="paso-6">
           <section class="paso-header">
             <h2 class="paso-titulo">Datos Académicos (Paso 2)</h2>
           </section>
@@ -84,17 +211,17 @@
           </section>
 
           <section class="paso-footer">
-            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="1" data-step="2">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="5" data-step="6">
               <i class="fa-solid fa-caret-left"></i> Regresar
             </button>
 
-            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="2">
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="7" data-step="6">
               Continuar <i class="fa-solid fa-caret-right"></i>
             </button>
           </section>
         </div>
 
-        <div class="paso" id="paso-3">
+        <div class="paso" id="paso-7">
           <section class="paso-header">
             <h2 class="paso-titulo">Datos de la suspensión o renuncia (Paso 3)</h2>
           </section>
@@ -115,23 +242,23 @@
           </section>
 
           <section class="paso-footer">
-            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="2" data-step="3">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="6" data-step="7">
               <i class="fa-solid fa-caret-left"></i> Regresar
             </button>
-            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="4" data-step="3">
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="8" data-step="7">
               Continuar <i class="fa-solid fa-caret-right"></i>
             </button>
           </section>
         </div>
 
-        <div class="paso" id="paso-4">
+        <div class="paso" id="paso-8">
           <section class="paso-header">
             <h2 class="paso-titulo">Carga de formulario MINEDUC (Paso 4)</h2>
           </section>
           
           <section class="paso-body">
             <div class="paso-info">
-              <p>Al suspender tus beneficios, es necesario que adjuntes el Formulario de Suspensión del MINEDUC.</p>
+              <p class="paso-parrafo">Al suspender tus beneficios, es necesario que adjuntes el Formulario de Suspensión del MINEDUC.</p>
 
               <h4 class="paso-subtitulo paso-aviso">IMPORTANTE</h4>
               <p class="paso-parrafo">Completa el formulario de suspensión de beneficios estudiantiles del MINEDUC con letra legible (documento
@@ -152,16 +279,17 @@
           </section>
 
           <section class="paso-footer">
-            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="4">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="7" data-step="8">
               <i class="fa-solid fa-caret-left"></i> Regresar
             </button>
-            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="5" data-step="4">
+
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="9" data-step="8">
               Continuar <i class="fa-solid fa-caret-right"></i>
             </button>
           </section>
         </div>
 
-        <div class="paso" id="paso-5">
+        <div class="paso" id="paso-9">
           <section class="paso-header">
             <h2 class="paso-titulo">Carga de formulario MINEDUC (Paso 4)</h2>
           </section>
@@ -179,15 +307,15 @@
           </section>
 
           <section class="paso-footer">
-            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="4">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="8" data-step="9">
               <i class="fa-solid fa-caret-left"></i> Regresar
             </button>
-            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="6" data-step="5">
+            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="10" data-step="9">
               Continuar <i class="fa-solid fa-caret-right"></i>
             </button>
         </div>
 
-        <div class="paso" id="paso-6">
+        <div class="paso" id="paso-10">
           <section class="paso-header">
             <h2 class="paso-titulo">Carga de formulario MINEDUC (Paso 4)</h2>
           </section>
@@ -208,7 +336,7 @@
           </section>
 
           <section class="paso-footer">
-            <button type="button" class="paso-boton paso-boton-siguiente" data-to_step="3" data-step="4">
+            <button type="button" class="paso-boton paso-boton-regresar" data-to_step="9" data-step="10">
               <i class="fa-solid fa-caret-left"></i> Regresar
             </button>
             <button type="submit" class="paso-boton paso-boton-confirmar">

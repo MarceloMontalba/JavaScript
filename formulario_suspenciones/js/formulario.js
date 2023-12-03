@@ -11,13 +11,11 @@ formulario.addEventListener("click", function(e){
     pasoActual.classList.remove("paso-activo");
     pasoSaltar.classList.add("paso-activo");
     
-    console.log(pasoActual);
-    console.log(pasoSaltar);
     if(esBotonSiguiente) {
       pasoSaltar.classList.add("paso-izquierda");
     } 
     if(esBotonRegreso){
-      pasoSaltar.classList.remove("paso-izquierda");
+      pasoActual.classList.remove("paso-izquierda");
     }
   }
 })

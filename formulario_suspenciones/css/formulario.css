@@ -36,8 +36,8 @@ body {
 
 /* Formulario */
 .formulario-solicitud {
-  padding: 1.5rem;
-  max-width: 600px;
+  padding: 1.1rem;
+  max-width: 26rem;
 }
 
 /* Header del formmulario */
@@ -47,9 +47,9 @@ body {
 }
 
 .logo-universidad {
-  width: 25rem;
+  width: 20rem;
   margin: auto;
-  margin-bottom: .05rem;
+  margin-bottom: .03rem;
   pointer-events: none;
 }
 
@@ -57,7 +57,7 @@ body {
 .barra-progreso {
   display: flex;
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: .5rem;
   counter-reset: step;
   padding: 0;
   cursor: default;
@@ -66,7 +66,7 @@ body {
 .barra-progreso-opcion {
   width: 100%;
   text-align: center;
-  font-size: .9rem;
+  font-size: .7rem;
   text-transform: uppercase;
   position: relative;
 }
@@ -75,12 +75,12 @@ body {
   display: flex;
   content: counter(step);
   counter-increment: step;
-  width: 35px;
-  height: 35px;
-  box-shadow: 0px 0px 8px #827f7f;
+  width: 1.8rem;
+  height: 1.8rem;
+  box-shadow: 0px 0px .5rem #827f7f;
   background-color: white;
-  margin: 0 auto 5px;
-  border-radius: 20px;
+  margin: 0 auto .3rem;
+  border-radius: 6rem;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -90,12 +90,12 @@ body {
 .barra-progreso-opcion:after {
   display: block;
   content: '';
-  height: 2px;
-  width: 170px;
-  box-shadow: 0px 0px 8px #827f7f;
+  height: .2rem;
+  width: 3rem;
+  box-shadow: 0px 0px .5rem #827f7f;
   background-color: white;
   position: absolute;
-  top: 17px;
+  top: 1rem;
   left: -50%;
   z-index: 1;
 }
@@ -115,11 +115,11 @@ body {
 
 /* Titulo del formulario */
 .contenedor-formulario-titulo {
-  padding: 0 10px;
+  padding: 0 2.4rem;
 }
 
 .formulario-titulo {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: center;
   font-family: PTSans;
 }
@@ -129,10 +129,11 @@ body {
   display: flex;
   align-items: flex-start;
 }
+
 /* Confifguracion de pasos */
 .paso {
   background-color: white;
-  box-shadow: 0px 0px 40px #827f7f;
+  box-shadow: 0px 0px 3rem #827f7f;
   min-width: 100%;
   visibility: hidden;
   pointer-events: none;
@@ -148,10 +149,6 @@ body {
 
 .paso-izquierda {
   margin-left: -100%;
-}
-
-.paso-derecha {
-  margin-left: 100%;
 }
 
 @keyframes scale {
@@ -171,26 +168,26 @@ body {
 }
 
 .paso-header {
-  padding: 15px 15px;
+  padding: .6em .6rem;
   background-color: #007bbe;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: .2rem;
 }
 
 .paso-body {
-  padding-top: 8px;
+  padding-top: .2rem;
 }
 
 .paso-titulo {
   margin: 0;
   font-family: PTSans;
-  font-size: 1.1rem;
+  font-size: .9rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 .paso-info {
-  padding: 10px 30px;
+  padding: .5rem 2rem;
 }
 
 .paso-info > *{
@@ -199,42 +196,42 @@ body {
 
 .paso-info label{
   font-family: Fira;
-  font-size: 1rem;
-  margin-bottom: 7px;
+  font-size: .9rem;
+  margin-bottom: .3rem;
   width: 100%;
   cursor: pointer;
 }
 
 .paso-info input[type="text"]{
-  padding: 8px 16px;
-  border-radius: 15px;
+  padding: .3rem .7rem;
+  border-radius: .7rem;
   border: 1px solid #bdc5c9;
   width: 90%;
   font-family: Patua;
-  font-size: 1rem;
+  font-size: .9rem;
 }
 
 .paso-info input[type="text"]:focus {
-  box-shadow: 0 0 15px #007bbe;
+  box-shadow: 0 0 .5rem #007bbe;
   border: 1px solid #059ced;
   outline: none;
 }
 
 .paso-footer {
-  margin-top: 10px;
-  padding: 10px 30px;
+  margin-top: .1rem;
+  padding: .4rem 2rem 1.4rem;
   display: flex;
   justify-content: center;
 }
 
 .paso-footer button {
   width: 100%;
-  margin: 8px 5px 30px;
 }
 
 .paso-boton {
   border-radius: 0;
-  padding: 10px 15px;
+  padding: .4rem .6rem;
+  margin: 0 .3rem;
   cursor: pointer;
   display: block;
   font-family: Fira;
@@ -249,7 +246,7 @@ body {
 }
 
 .paso-boton-siguiente:hover {
-  box-shadow: 0 0 10px #007bbe;
+  box-shadow: 0 0 .9rem #007bbe;
 }
 
 .paso-boton-regresar {
@@ -259,7 +256,7 @@ body {
 }
 
 .paso-boton-regresar:hover {
-  box-shadow: 0 0 10px #007bbe;
+  box-shadow: 0 0 .9rem #007bbe;
 }
 
 .paso-boton-confirmar {
@@ -269,13 +266,13 @@ body {
 }
 
 .paso-boton-confirmar:hover {
-  box-shadow: 0 0 10px #2f9923;
+  box-shadow: 0 0 .9rem #2f9923;
 }
 
 /* Texto en formulario */
 .paso-aviso {
   font-family: Fira;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0;
   color: #ab0909;
   text-transform: uppercase;
@@ -285,6 +282,7 @@ body {
 .paso-parrafo {
   text-align: justify;
   margin-top: 0;
+  font-size: .9rem !important; 
 }
 
 /* Imagen formulario suspension */
@@ -296,8 +294,8 @@ body {
 }
 
 .imagen-formulario-suspension {
-  width: 16rem;
-  height: 21rem;
+  width: 10rem;
+  height: 15rem;
   border: 2px solid black;
   margin: .3rem;
 }
