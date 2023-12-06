@@ -1,0 +1,208 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: #01568e;
+}
+
+.contenedor {
+  width: 55%;
+  margin: auto;
+  padding: 1.5rem 3rem;
+  background-color: white;
+  height: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+  color: #0076b5
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align:justify;
+  width: 100%;
+}
+
+/* Barras de despliegue de los apartados del modulo */
+.despliegue-apartado {
+  background-color: #0076b5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1rem;
+  margin-top: .1rem;
+  padding: .9rem 1.4rem;
+  cursor: pointer;
+  display: flex;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+.despliegue-arriba {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.despliegue-abajo {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.despliegue-apartado span {
+  flex: 1;
+  text-align: end;
+  font-size: .9rem;
+}
+
+/* Apartados escondidos */
+.apartado-escondido {
+  margin: 1.5rem 0;
+}
+
+/* Diseño tabla */
+.tabla-institucional {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.tabla-institucional thead {
+  background-color: #0076b5;
+  color: white;
+  font-weight: bold;
+}
+
+.tabla-institucional tbody {
+  background-color: #d4e3e5;
+}
+
+.tabla-institucional th, .tabla-institucional td {
+  padding: .5rem;
+  border: none;
+  text-align: center;
+}
+
+/* Configuracion de apartados de solicitud */
+.control-entrada { 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  margin: 1.2rem 0;
+}
+
+.control-entrada > * {
+  display: block;
+}
+
+.control-entrada label {
+  margin-bottom: .2rem;
+  font-weight: bold;
+}
+
+select {
+  padding: .4rem 1rem;
+  border-radius: 0;
+  background-color: white;
+  border: 1px solid #dddddd;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+  margin: 2.7rem 0 2rem;
+}
+
+.control-entrada span {
+  text-transform: uppercase;
+}
+
+input[type="text"]{
+  padding: .4rem 1rem;
+  border-radius: 0;
+  background-color: white;
+  border: 1px solid #dddddd;
+}
+
+input[type="text"]:disabled{
+  background-color:#cccccc;
+  color: #7d7a7a;
+  border: 1px solid #dddddd;
+}
+
+.no-salto {
+  display: inline-block;
+}
+
+#input-semestres-tratar {
+  width: .7rem;
+}
+
+/*Tabla para margenes*/
+.tabla-margen {
+  font-size: .9rem;
+  margin: 1.5rem 0;
+  margin-bottom: .2rem;
+  font-weight: bold;
+}
+
+/*Tabla grande*/
+.tabla-grande {
+  width: 100%;
+}
+
+/* Separaciones personalizadas*/
+.d1 {
+  margin-right: .7rem;
+}
+
+/* Botones */
+.btn-institucional {
+  padding: .5rem 1.4rem;
+  background-color: #3c7499;
+  color: white;
+  cursor: pointer;
+  border: 0;
+}
+
+.btn-institucional:hover {
+  background-color: #4682aa;
+  box-shadow: 0 0 .6rem #4682aa;
+}
+
+.btn-eliminar-tabla {
+  padding: .5rem 1rem;
+  background-color: #ab190c;
+  color: white;
+  cursor: pointer;
+  border: 0;
+}
+
+.btn-eliminar-tabla:hover {
+  background-color: #bd1f11;
+  box-shadow: 0 0 .6rem #bd1f11;
+}
+
+/* Tamaños */
+.w-10{
+  width: 12rem;
+}
+
+/* Margenes */
+.mb-1 {
+  margin-bottom: 2rem;
+}

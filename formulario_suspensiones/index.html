@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitudes Estudiantes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Solicitudes estudiantes</h1>
+    
+    <p>En esta sección encontrarás el formulario mediante el cual puedes hacer una solicitud de <b>Reincorporación</b>, 
+       <b>Suspensión</b> o <b>Renuncia</b>. Además puedes consultar el estado en que se encuentra tu solicitud.
+    </p>
+
+    <p>
+      Para visualizar el contenido solo debes hacer click sobre el Título de tu interés el cual desplegará el 
+      contenido deseado.
+    </p>
+
+    <section class="despliegue-apartado despliegue-arriba">
+      Ingresar solicitud
+      <span>▼</span>
+    </section>
+    <section id="apartado-crear-solicitud" class="apartado-escondido">
+      <!-- Datos personales del alumno -->
+      <table class="tabla-institucional">
+        <thead>
+          <tr>
+            <th>Rut</th>
+            <th>Nombre del alumno</th>
+            <th>Tel. Fijo</th>
+            <th>Celular</th>
+            <th>E-Mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11111111-1</td>
+            <td>PEPITO GRILLO GONZALES CASTILLO</td>
+            <td>912345678</td>
+            <td></td>
+            <td>pgonzales2023@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section class="control-entrada">
+        <label for="input-solicitud">Seleccione una Carrera:</label>
+        <select name="input-carrera-solicitud" id="input-carrera-solicitud">
+          <option value="0">Listado de carreras...</option>
+        </select>
+      </section>
+
+      <article id="">
+        <!-- Tabla de información del alumno dentro de la carrera -->
+        <table class="tabla-institucional">
+          <thead>
+            <tr>
+              <th>Registro</th>
+              <th>Año Ingreso</th>
+              <th>Carrera</th>
+              <th>Situación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01010101</td>
+              <td>2022</td>
+              <td>INGENIERÍA CIVIL EN INFORMÁTICA</td>
+              <td>SUSPENSION</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>SOLICITUD ACADÉMICA</h2>
+        <table class="tabla-grande">
+          <tr>
+            <td>
+              <section class="control-entrada">
+                <label for="input-tipo-solicitud">Tipo de Solicitud:</label>
+                <select name="input-tipo-solicitud" id="input-tipo-solicitud">
+                  <option value="0">Seleccionar</option>
+                  <option value="1">SUSPENSIÓN</option>
+                  <option value="2">RENUNCIA</option>
+                  <option value="3">REINCORPORACIÓN</option>
+                </select>
+              </section>
+            </td>
+            <td>
+              <section class="control-entrada">
+                <label>Fecha Solicitud:</label> <span>05-12-2022</span>
+              </section>      
+            </td>
+            <td>
+              <section class="control-entrada">
+                <label>Semestre/Año Solicitud: </label> <span>Segundo Semestre del 2022</span>
+              </section>
+            </td>
+          </tr>
+        </table>
+
+        <article id="">
+          <section class="control-entrada">
+            <label for="input-semestres-tratar" class="no-salto">Total Semestres:</label>
+            <input type="text" name="input-semestres-tratar" id="input-semestres-tratar" value="1" class="no-salto" disabled>
+          </section>
+
+          <table class="tabla-margen tabla-grande">
+            <tbody>
+              <section class="control-entrada">
+                <tr>
+                  <td class="w-10"><label for="input-motivo-solicitud" class="no-salto d1">Motivos:</label></td>
+                  <td>
+                    <select name="input-motivo-solicitud" id="input-motivo-solicitud" class="no-salto">
+                      <option value="">Seleccionar motivo...</option>
+                    </select>
+                  </td>
+                </tr>
+              </section>
+    
+              <article>
+                <tr>
+                  <section class="control-entrada">
+                    <td>
+                      <label for="input-descripcion-motivo-solicitud" class="no-salto d1">Descripción Motivo:</label>
+                    </td>
+                    <td>
+                      <select name="input-descripcion-motivo-solicitud" id="input-descripcion-motivo-solicitud" class="no-salto">
+                        <option value="">Seleccionar motivo...</option>
+                      </select>
+                    </td>
+                  </section>
+                </tr>
+                
+                <tr>
+                  <td></td>
+                  <td>
+                    <button class="btn-institucional mb-1">
+                      <i class="fa-solid fa-plus"></i> Agregar
+                    </button>
+                  </td>
+                </tr>
+
+                <article>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <table class="tabla-institucional tabla-grande tabla-inmutable">
+                        <thead>
+                          <tr>
+                            <th>Motivo</th>
+                            <th>Descripción</th>
+                            <th>Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="w-10">ACADEMICA</td>
+                            <td>NO ME LA PUEDO</td>
+                            <td class="w-10">
+                              <button class="btn-eliminar-tabla">
+                                <i class="fa-solid fa-trash"></i> Descartar
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </article>
+              </article>
+            </tbody>
+          </table>
+
+          <section class="control-entrada">
+            <label for="" class="no-salto">Detalles del Motivo:</label>
+            <textarea name="" id="" placeholder="Ingresar los detalles de los motivos si lo desea..." class="no-salto"></textarea>
+          </section>
+
+
+      </article>
+    </section>
+
+
+
+    <section class="despliegue-apartado despliegue-abajo">
+      Resultados de la Solicitud
+      <span>▼</span>
+    </section>
+
+  </div>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
