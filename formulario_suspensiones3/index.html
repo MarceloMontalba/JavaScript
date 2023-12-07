@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitudes Estudiantes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Solicitudes estudiantes</h1>
+    
+    <p>En esta sección encontrarás el formulario mediante el cual puedes hacer una solicitud de <b>Reincorporación</b>, 
+       <b>Suspensión</b> o <b>Renuncia</b>. Además puedes consultar el estado en que se encuentra tu solicitud.
+    </p>
+
+    <p>
+      Para visualizar el contenido solo debes hacer click sobre el Título de tu interés el cual desplegará el 
+      contenido deseado.
+    </p>
+
+    <section class="despliegue-apartado despliegue-arriba">
+      Ingresar solicitud
+      <span>▼</span>
+    </section>
+    <section id="apartado-crear-solicitud" class="apartado-escondido">
+
+      <article class="contenedor-filtros">
+        <table class="tabla-formulario">
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h2>FILTROS DE LA SOLICITUD</h2>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="formulario-fila">
+              <td class="formulario-cabecera">Carrera</td>
+              <td class="formulario-informacion">
+                <select name="" id="">
+                  <option value="0">404 - Plan: 2 : NUTRICIÓN Y DIETÉTICA</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="formulario-fila">
+              <td class="formulario-cabecera">Tipo de Solicitud</td>
+              <td class="formulario-informacion">
+                <select name="" id="">
+                  <option value="1">SUSPENSIÓN</option>
+                  <option value="2">RENUNCIA</option>
+                  <option value="3">REINCORPORACIÓN</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article id="">
+        <article class="contenedor-formulario">
+          <table class="tabla-formulario">
+            <thead>
+              <tr>
+                <td colspan="2">
+                  <h2>FORMULARIO DE SOLICITUD DE SUSPENSIÓN ACADÉMICA</h2>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="formulario-seccion">
+                <td colspan="2">
+                  información personal
+                </td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Rut</td>
+                <td class="formulario-informacion">11111111-1</td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Nombre</td>
+                <td class="formulario-informacion">PEPITO GRILLO GONZALES CASTILLO</td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Tel. Fijo</td>
+                <td class="formulario-informacion">912345678</td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Celular</td>
+                <td class="formulario-informacion"></td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">E-Mail</td>
+                <td class="formulario-informacion">pgonzales2023@gmail.com</td>
+              </tr>
+              <tr class="formulario-seccion">
+                <td colspan="2">
+                  información academica
+                </td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Registro</td>
+                <td class="formulario-informacion">010101</td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Año de Ingreso</td>
+                <td class="formulario-informacion">2022</td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Carrera</td>
+                <td class="formulario-informacion">NUTRICIÓN Y DIETÉTICA</td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Situación</td>
+                <td class="formulario-informacion b">SUSPENSIÓN</td>
+              </tr>
+              <tr class="formulario-seccion">
+                <td colspan="2">
+                  detalles de la solicitud
+                </td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Fecha solicitud</td>
+                <td class="formulario-informacion">06-12-2023</td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Semestre y/o Año Solicitud</td>
+                <td class="formulario-informacion">
+                  Primer semestre del 2022
+                </td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Semestres a Suspender</td>
+                <td class="formulario-informacion">
+                  <select name="" id="">
+                    <option value="0">Seleccione semestre a suspender...</option>
+                    <option value="1">Semestre 1</option>
+                    <option value="2">Semestre 2</option>
+                    <option value="3">Todo el Año</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="formulario-seccion">
+                <td colspan="2">
+                  motivos de la solicitud
+                </td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Motivo</td>
+                <td class="formulario-informacion">
+                  <select name="" id="">
+                    <option value="0">Seleccione el motivo de la solicitud...</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Motivo Específico</td>
+                <td class="formulario-informacion">
+                  <select name="" id="" disabled>
+                    <option value="0">Seleccione el motivo especifico de la solicitud...</option>
+                    <option value="1">Semestre 1</option>
+                    <option value="2">Semestre 2</option>
+                    <option value="3">Todo el Año</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="formulario-fila">
+                <td class="formulario-cabecera">Detalle del motivo (Opcional)</td>
+                <td class="formulario-informacion">
+                  <textarea name="" id="" placeholder="Indique brebemente la razón de su solicitud..."></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </article>
+
+      <div class="contenedor-continuar">
+        <button class="boton-verde">
+          Continuar <i class="fa-solid fa-caret-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="despliegue-apartado despliegue-abajo">
+      Resultados de la Solicitud
+      <span>▼</span>
+    </section>
+
+  </div>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

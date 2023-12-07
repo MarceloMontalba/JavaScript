@@ -1,0 +1,270 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: #01568e;
+}
+
+.contenedor {
+  width: 55%;
+  margin: auto;
+  padding: 1.5rem 3rem;
+  background-color: white;
+  height: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+  color: #0076b5
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align:justify;
+  width: 100%;
+}
+
+/* Barras de despliegue de los apartados del modulo */
+.despliegue-apartado {
+  background-color: #0076b5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1rem;
+  margin-top: .1rem;
+  padding: .9rem 1.4rem;
+  cursor: pointer;
+  display: flex;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+.despliegue-arriba {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.despliegue-abajo {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.despliegue-apartado span {
+  flex: 1;
+  text-align: end;
+  font-size: .9rem;
+}
+
+/* Apartados escondidos */
+.apartado-escondido {
+  margin: 1.5rem 0;
+}
+
+/* Diseño tabla */
+.tabla-institucional {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.tabla-institucional thead {
+  background-color: #0076b5;
+  color: white;
+  font-weight: bold;
+}
+
+.tabla-institucional tbody {
+  background-color: #d4e3e5;
+}
+
+.tabla-institucional th, .tabla-institucional td {
+  padding: .5rem;
+  border: none;
+  text-align: center;
+}
+
+/* Configuracion de apartados de solicitud */
+.control-entrada { 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  margin: 1.2rem 0;
+}
+
+.control-entrada > * {
+  display: block;
+}
+
+.control-entrada label {
+  margin-bottom: .2rem;
+  font-weight: bold;
+}
+
+select {
+  border-radius: 0;
+  background-color: white;
+  border: 1px solid #a19d9d;
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: .3rem 1rem;
+  font-size: .7rem;
+}
+
+.control-entrada span {
+  text-transform: uppercase;
+}
+
+.no-salto {
+  display: inline-block;
+}
+
+#input-semestres-tratar {
+  width: .7rem;
+}
+
+/* Tabla de los formularios */
+.contenedor-formulario {
+  display:flex;
+  justify-content: center;
+}
+
+.tabla-formulario {
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.tabla-formulario thead {
+  background-color: #0076b5;
+  color: white;
+  font-weight: bold;
+  font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: .7em;
+  text-align: center;
+  margin: auto;
+}
+
+.formulario-seccion {
+  background-color: #dbd5d5;
+  text-transform: uppercase;
+  font-size: .7rem;
+  text-align: center;
+  font-weight: bold;
+  border-top: 1px solid #736f6f;
+  border-bottom: 1px solid #736f6f;
+}
+
+.formulario-seccion td {
+  padding: .3rem;
+}
+
+.formulario-fila {
+  font-size: .9rem;
+  border-bottom: 1px solid #736f6f;
+  text-transform: uppercase;
+}
+
+.formulario-cabecera {
+  text-transform: uppercase;
+  background-color: #d4e3e5;
+  font-weight: bold;
+  font-size: .8rem;
+  padding: .4rem 2rem;
+  width: 10rem;
+  border-right: 1px solid #736f6f;
+  font-size: .8rem;
+}
+
+.formulario-informacion {
+  padding: .4rem 2rem;
+  font-size: .9rem;
+}
+
+/* Texto en negrita */
+.b {
+  font-weight: bold;
+}
+
+/* Controladores que estan dentro del formulario */
+.tabla-formulario select{
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.tabla-formulario select:disabled{
+  background-color: #cfd2d4;
+  cursor: not-allowed;
+}
+
+.tabla-formulario textarea {
+  width: 100%;
+  height: 5rem;
+  resize: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+/* Tabla de los filtros */
+.contenedor-filtros {
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-filtros table {
+  width: 75%;
+}
+
+.contenedor-filtros table th {
+  padding: .8em 2rem;
+  font-size: .7rem;
+}
+
+.contenedor-filtros table td{
+  padding: .2em 2rem;
+}
+
+.contenedor-filtros table h2 {
+  margin: 0;
+}
+
+.contenedor-filtros table select {
+  padding: .3rem 1rem;
+  font-size: .7rem;
+}
+
+/* Botones */
+.boton-verde {
+  padding: .6rem 1.5rem;
+  background-color: #117a36;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+
+.boton-verde:hover {
+  background-color: #0f8037;
+  box-shadow: 0 0 20px #0f8037;
+}
+
+.contenedor-continuar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
