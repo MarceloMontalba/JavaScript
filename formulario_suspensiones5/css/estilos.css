@@ -1,0 +1,60 @@
+body {
+  background-color: #01568e;
+}
+
+/* Contenedor del mesnaje principal */
+.contenedor-mensaje-solicitud {
+  padding: 1.8rem;
+}
+
+/*Contenedor principal del modulo*/
+.contenedor-principal {
+  background-color: white;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.contenedor-mensaje-solicitud h1 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.4rem;
+  color: #0076b5
+}
+
+.contenedor-mensaje-solicitud p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align:justify;
+  width: 100%;
+}
+
+/*Botones Apartados*/
+.accordion {
+	--bs-accordion-btn-color: #e1e2e3;
+	--bs-accordion-btn-bg: #0076b5;
+	--bs-accordion-active-color: white;
+	--bs-accordion-active-bg: #0483c7;
+}
+
+.accordion-button:after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.b-apartado {
+  text-transform: uppercase;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+/*Iconos Apartados*/
+.m-icono {
+  margin-right: .6rem;
+}

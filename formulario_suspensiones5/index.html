@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitudes Estudiantes</title>
+  <link rel="icon" type="image/png" href="img/icono.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <main class="container">
+    <section class="row">
+      <article class="container-fluid contenedor-principal col-12 col-md-9 col-lg-7">
+        <div class="container contenedor-mensaje-solicitud">
+          <h1>Solicitudes estudiantes</h1>
+        
+          <p>En esta sección encontrarás el formulario mediante el cual puedes hacer una solicitud de <b>Reincorporación</b>, 
+            <b>Suspensión</b> o <b>Renuncia</b>. Además puedes consultar el estado en que se encuentra tu solicitud.
+          </p>
+    
+          <p>
+            Para visualizar el contenido solo debes hacer click sobre el título de tu interés el cual desplegará el 
+            contenido deseado.
+          </p>
+        </div>
+    
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed b-apartado" type="button" data-bs-toggle="collapse" data-bs-target="#primerApartado" aria-expanded="true" aria-controls="primerApartado">
+                <i class="fa-solid fa-file-signature m-icono"></i> Ingresar Solicitud
+              </button>
+            </h2>
+            <div id="primerApartado" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed b-apartado" type="button" data-bs-toggle="collapse" data-bs-target="#segundoApartado" aria-expanded="true" aria-controls="segundoApartado">
+                <i class="fa-solid fa-list-check m-icono"></i> Resultados de la Solicitud
+              </button>
+            </h2>
+            <div id="segundoApartado" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
