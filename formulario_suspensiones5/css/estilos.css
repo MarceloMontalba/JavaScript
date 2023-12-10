@@ -11,7 +11,8 @@ body {
 .contenedor-principal {
   background-color: white;
   height: 100vh;
-  overflow-y: auto;
+  overflow-y:scroll;
+  box-shadow: 0 0 10px black;
 }
 
 .contenedor-mensaje-solicitud h1 {
@@ -57,4 +58,34 @@ body {
 /*Iconos Apartados*/
 .m-icono {
   margin-right: .6rem;
+}
+
+.tipo-solicitud-titulo {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85rem;
+  padding: .7rem;
+  color: white;
+  border-radius: 0.375rem 0.375rem 0 0;
+  background-color: #403e3e;
+  margin: 0;
+}
+
+/* Formularios */
+.titulo-formulario {
+  background-color: #0076b5;
+  color: #ffffff;
+}
+.titulo-formulario h4{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  margin: .6rem;
+}
+
+.form-group {
+  justify-content: center;
+  align-items: center;
 }

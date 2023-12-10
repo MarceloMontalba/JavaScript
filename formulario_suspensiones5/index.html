@@ -36,7 +36,85 @@
             </h2>
             <div id="primerApartado" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <!--Selección del tipo de formulario-->
+                <div class="card">
+                  <h3 class="tipo-solicitud-titulo">Tipo de solicitud</h3>
+                  <div class="card-header tarjeta-tipo-solicitud-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Suspensión</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Renuncia</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Reincorporación</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <!--Seccion de suspensiones academicas-->
+                    <div id="seleccion-suspensiones container-fluid">
+                      <article class="card">
+                        <section class="card-header titulo-formulario p-0">
+                          <h4>Solicitud de suspensión academica</h4>
+                        </section>
+                        <section class="card-body">
+                          <form>
+                            <div class="form-group row">
+                              <label for="staticEmail" class="col-sm-3 col-form-label">Fecha solicitud</label>
+                              <div class="col-sm-9">
+                                <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="10-12-2023">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="staticEmail" class="col-sm-3 col-form-label">Semestre solicitud</label>
+                              <div class="col-sm-9">
+                                <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="SEGUNDO SEMESTRE DEL AÑO 2023">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="inputPassword" class="col-sm-3 col-form-label">Proyección suspensión</label>
+                              <div class="col-sm-9">
+                                <select name="" id="" class="form-select form-select-sm">
+                                  <option value="">AÑO COMPLETO - 2023</option>
+                                  <option value="">SEMESTRE 1 - 2023 </option>
+                                  <option value="">SEMESTRE 2 - 2023</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="inputPassword" class="col-sm-3 col-form-label">Motivo</label>
+                              <div class="col-sm-9">
+                                <select name="" id="" class="form-select form-select-sm">
+                                  <option value="">Seleccionar motivo...</option>
+                                  <option value="">ACADÉMICO</option>
+                                  <option value="">CAMBIO DE UNIVERSIDAD</option>
+                                  <option value="">CAMBIO INTERNO UCT</option>
+                                </select>
+                              </div>
+                              <div class="col-sm-3 mt-2">Motivo Principal</div>
+                              <div class="col-sm-9 mt-2">
+                                <select name="" id="" class="form-select form-select-sm" disabled>
+                                  <option value="">Seleccionar motivo...</option>
+                                  <option value="">ACADÉMICO</option>
+                                  <option value="">CAMBIO DE UNIVERSIDAD</option>
+                                  <option value="">CAMBIO INTERNO UCT</option>
+                                </select>
+                              </div>
+                              <div class="col-sm-3 mt-2"></div>
+                              <div class="col-sm-9 mt-2">
+                                <button class="btn btn-primary btn-sm">
+                                  <i class="fa-solid fa-thumbtack m-icono"></i>Agregar
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </section>
+                      </article>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
