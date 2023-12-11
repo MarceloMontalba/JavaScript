@@ -75,18 +75,26 @@ body {
   border-radius: 0.375rem 0.375rem 0 0;
   background-color: #403e3e;
   margin: 0;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 /* Formularios */
 .titulo-formulario {
-  background-color: #0076b5;
+  background-color: #403e3e;
   color: #ffffff;
+  border-radius: 0 !important;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 .titulo-formulario h4{
   text-align: center;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: .8rem;
+  font-size: .9rem;
+  padding: .4rem;
   margin: .6rem;
 }
 
@@ -95,27 +103,50 @@ body {
   align-items: center;
 }
 
-/*Tabla información academica*/
-.tabla-informacion-academica {
+/*Tabla institucional */
+.tabla-institucional {
   text-align: center;
   box-shadow: 0 0 4px #4c5354;
-  margin-bottom: 2rem;
 }
-.tabla-informacion-academica th{
+.tabla-institucional th{
   background-color: #0075b5 !important;
   color: white !important;
   text-transform: uppercase;
   font-size: .77rem;
 }
 
-.tabla-informacion-academica td, .tabla-informacion-academica tbody{
+.tabla-institucional td, .tabla-institucional tbody{
   background-color: #d4e3e5 !important;
   font-size: .8rem;
 }
 
+.tabla-info-academica {
+  margin-bottom: 2rem;
+}
+
+.tabla-info-academica th{
+  font-size: .77rem;
+}
+
+.tabla-info-academica td, .tabla-info-academica tbody{
+  background-color: #d4e3e5 !important;
+  font-size: .8rem;
+}
+
+.tabla-motivos th{
+  font-size: .6rem;
+}
+.tabla-motivos td, .tabla-motivos tbody{
+  background-color: white !important;
+  font-size: .7rem;
+}
+
 /*Barra de Progreso*/
 .contenedor-barra-progreso {
-  margin: 0 0 1.6rem;
+  margin: 0 0 3rem;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .contenedor-titulo-barra-progreso {
@@ -125,4 +156,42 @@ body {
   font-weight: bold;
   margin-top: 1rem;
   text-transform: uppercase;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
+
+.table {
+  margin: 0 !important;
+}
+
+/*Anchos*/
+.a-100 {
+  width: 100px !important;
+}
+.a-290 {
+  width: 290px !important;
+}
+
+/* Labels del formulario */
+.form-group label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.obligatorio {
+  color: #b01810;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .9rem;
+}
+
+/* Mensaje de Bienvenida tipo solicitud */
+.mensaje-bienvenida h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Barra Progreso */
+

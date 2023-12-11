@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solicitudes Estudiantes</title>
   <link rel="icon" type="image/png" href="img/icono.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
@@ -36,47 +37,30 @@
             </h2>
             <div id="primerApartado" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <!--Tabla con la información academica-->
-                <div class="table-responsive-md table-sm tabla-informacion-academica">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Registro</th>
-                        <th>Carrera</th>
-                        <th>Año Ingreso</th>
-                        <th>Estado</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>01010101</td>
-                        <td>INGENIERÍA CIVIL EN INFORMATICA</td>
-                        <td>2023</td>
-                        <td>REGULAR</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
                 <!--Selección del tipo de formulario-->
                 <div class="card tarjeta-tipo-solicitud">
                   <h3 class="tipo-solicitud-titulo">Tipo de solicitud</h3>
                   <div class="card-header tarjeta-tipo-solicitud-header">
-                    <ul class="nav nav-tabs card-header-tabs">
+                    <ul class="nav nav-tabs card-header-tabs ">
                       <li class="nav-item">
-                        <a class="nav-link active" href="#">Suspensión</a>
+                        <a class="nav-link btn-solicitud" href="#" id="btn-suspension">Suspensión</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Renuncia</a>
+                        <a class="nav-link btn-solicitud" href="#" id="btn-reincorporacion">Reincorporación</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Reincorporación</a>
+                        <a class="nav-link btn-solicitud" href="#" id="btn-renuncia">Renuncia</a>
                       </li>
                     </ul>
                   </div>
                   <div class="card-body">
                     <!--Seccion de suspensiones academicas-->
-                    <div id="seleccion-suspensiones container-fluid">
+                    <div class="container-fluid mensaje-bienvenida">
+                      <p>Realiza tus trámites académicos de manera fácil y rápida. Aquí puedes solicitar una reincorporación, suspensión o renuncia. Consulta el estado de tu solicitud en cualquier momento.</p>
+                      <p>Selecciona una opción del menú para comenzar con tú solicitud.</p>
+                    </div>
+
+                    <div id="seleccion-suspensiones" class="seleccion-tipo-solicitud container-fluid">
                       <div class="container">
                         <div class="row">
                           <div class="col-1"></div>
@@ -94,23 +78,284 @@
                         <section class="card-header titulo-formulario p-0">
                           <h4>Solicitud de suspensión academica</h4>
                         </section>
-                        <section class="card-body">
-                          <form>
+                        <!--Cuerpo del formulario-->
+                        <section class="card-body p-0">
+                          <form class="p-3">
+
                             <div class="form-group row">
-                              <label for="staticEmail" class="col-sm-3 col-form-label">Fecha solicitud</label>
-                              <div class="col-sm-9">
+                              <div class="accordion accordion-flush col-12" id="accordionExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header p-0" id="">
+                                    <button class="accordion-button p-3" type="button" data-bs-toggle="collapse" data-bs-target="#info-personal-suspensiones-desplegable" aria-expanded="true" aria-controls="info-personal-suspensiones-desplegable">
+                                      <i class="fa-solid fa-user m-icono"></i> Información Personal
+                                    </button>
+                                  </h2>
+                                  <div id="info-personal-suspensiones-desplegable" class="accordion-collapse collapse show" aria-labelledby="info-personal-suspensiones-desplegable">
+                                    <div class="accordion-body">
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Rut</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="20123123-1">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Nombre Completo</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="PEPITO ALFREDO GONZALES CASTILLO">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Tel. Fijo</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="912345678">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Celular</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">E-Mail</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="pgonzales@gmail.com">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row mt-1"></div>
+                            <div class="form-group row">
+                              <div class="accordion accordion-flush" id="accordionExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button p-3" type="button" data-bs-toggle="collapse" data-bs-target="#info-academica-suspensiones-desplegable" aria-expanded="true" aria-controls="info-academica-suspensiones-desplegable">
+                                      <i class="fa-solid fa-graduation-cap m-icono"></i>Información Academica
+                                    </button>
+                                  </h2>
+                                  <div id="info-academica-suspensiones-desplegable" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                    <div class="accordion-body">
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Registro</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="123456789">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Año de Ingreso</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="2017">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Carrera</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="INGENIERIA CIVIL EN INFORMATICA">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Situación Actual</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="REGULAR">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row mt-1"></div>
+                            <div class="form-group row">
+                              <div class="accordion accordion-flush" id="accordionExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button p-3" type="button" data-bs-toggle="collapse" data-bs-target="#detalles-suspensiones-desplegable" aria-expanded="true" aria-controls="detalles-suspensiones-desplegable">
+                                      <i class="fa-solid fa-pencil m-icono"></i> Detalles de la Solicitud
+                                    </button>
+                                  </h2>
+                                  <div id="detalles-suspensiones-desplegable" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                    <div class="accordion-body">
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Fecha solicitud</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="10-12-2023">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Fecha solicitud</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="10-12-2023">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-xl-3 col-form-label">Semestre solicitud</label>
+                                        <div class="col-xl-9">
+                                          <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="SEGUNDO SEMESTRE DEL AÑO 2023">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row mt-3"></div>
+                                      <div class="form-group row">
+                                        <label for="inputPassword" class="col-xl-3 col-form-label">
+                                          Proyección de la suspensión <span class="obligatorio">(*)</span>
+                                        </label>
+                                        <div class="col-xl-9">
+                                          <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">AÑO COMPLETO - 2023</option>
+                                            <option value="">SEMESTRE 1 - 2023 </option>
+                                            <option value="">SEMESTRE 2 - 2023</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row mt-1"></div>
+                            <div class="form-group row">
+                              <div class="accordion accordion-flush" id="accordionExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button p-3" type="button" data-bs-toggle="collapse" data-bs-target="#motivos-suspensiones-desplegable" aria-expanded="true" aria-controls="motivos-suspensiones-desplegable">
+                                      <i class="fa-solid fa-question m-icono"></i>Motivos de la Solicitud
+                                    </button>
+                                  </h2>
+                                  <div id="motivos-suspensiones-desplegable" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                    <div class="accordion-body">
+                                      <div class="form-group row">
+                                        <label for="inputPassword" class="col-xl-3 col-form-label">
+                                          Motivo <span class="obligatorio">(*)</span>
+                                        </label>
+                                        <div class="col-xl-9">
+                                          <select name="" id="" class="form-select form-select-sm">
+                                            <option value="">Seleccionar motivo...</option>
+                                            <option value="">ACADÉMICO</option>
+                                            <option value="">CAMBIO DE UNIVERSIDAD</option>
+                                            <option value="">CAMBIO INTERNO UCT</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <div class="col-12 mt-3"></div>
+                                        <label for="inputPassword" class="col-xl-3 col-form-label">
+                                          Motivo principal <span class="obligatorio">(*)</span>
+                                          </label>
+                                        <div class="col-xl-9">
+                                          <select name="" id="" class="form-select form-select-sm" disabled>
+                                            <option value="">Seleccionar motivo...</option>
+                                            <option value="">ACADÉMICO</option>
+                                            <option value="">CAMBIO DE UNIVERSIDAD</option>
+                                            <option value="">CAMBIO INTERNO UCT</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <div class="col-xl-3 mt-1"></div>
+                                        <div class="col-xl-9 mt-1 mb-3">
+                                          <button class="btn btn-primary btn-sm">
+                                            <i class="fa-solid fa-thumbtack m-icono"></i>Agregar a la lista
+                                          </button>
+                                        </div>
+                                        <label for="inputPassword" class="col-form-label col-xl-3 col-xl-3">
+                                          Lista de motivos <span class="obligatorio">(*)</span>
+                                        </label>
+                                        <div class="col-xl-9 col-12">
+                                          <!--Lista de Motivos-->
+                                          <div class="table-responsive tabla-institucional">
+                                            <table class="table tabla-motivos">
+                                              <thead>
+                                                <tr>
+                                                  <th style="width: 110px">Motivos</th>
+                                                  <th style="width: 210px">Descripción</th>
+                                                  <th style="width: 110px">Acción</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>ACADÉMICO</td>
+                                                <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
+                                                <td>
+                                                  <button class="btn btn-danger btn-sm">
+                                                    <i class="fa-solid fa-xmark"></i> Quitar
+                                                  </button>
+                                                </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <div class="form-group row mt-3"></div>
+                                        <label for="inputPassword" class="col-xl-3 col-form-label">Descripción de los motivos</label>
+                                        <div class="col-xl-9">
+                                          <textarea name="" id="" class="form-control" placeholder="Ingresar una breve descripción de sus motivos..."></textarea>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </form>
+                        </section>
+                      </article>
+                    </div>
+
+                    <!--Seccion de reincorporacion-->
+                    <div id="seleccion-reincorporacion" class="seleccion-tipo-solicitud container-fluid">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-1"></div>
+                          <div class="col-10">
+                            <h3 class="contenedor-titulo-barra-progreso">Progreso de la Solicitud</h3>
+                            <div class="progress contenedor-barra-progreso">
+                              <div class="progress-bar" role="progressbar" style="width: 33.3%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">33%</div>
+                            </div>
+                          </div>
+                          <div class="col-1"></div>
+                        </div>
+                      </div>
+
+                      <article class="card">
+                        <section class="card-header titulo-formulario p-0">
+                          <h4>Solicitud de Reincorporación academica</h4>
+                        </section>
+                        <!--Cuerpo del formulario-->
+                        <section class="card-body">
+                          <form class="p-2">
+                            <div class="form-group row">
+                              <label for="staticEmail" class="col-xl-3 col-form-label">Fecha solicitud</label>
+                              <div class="col-xl-9">
                                 <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="10-12-2023">
                               </div>
                             </div>
+                            <div class="form-group row mt-3"></div>
                             <div class="form-group row">
-                              <label for="staticEmail" class="col-sm-3 col-form-label">Semestre solicitud</label>
-                              <div class="col-sm-9">
+                              <label for="staticEmail" class="col-xl-3 col-form-label">Semestre solicitud</label>
+                              <div class="col-xl-9">
                                 <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="SEGUNDO SEMESTRE DEL AÑO 2023">
                               </div>
                             </div>
+                            <div class="form-group row mt-3"></div>
                             <div class="form-group row">
-                              <label for="inputPassword" class="col-sm-3 col-form-label">Proyección suspensión</label>
-                              <div class="col-sm-9">
+                              <label for="inputPassword" class="col-xl-3 col-form-label">
+                                Proyección de la suspensión <span class="obligatorio">(*)</span>
+                              </label>
+                              <div class="col-xl-9">
                                 <select name="" id="" class="form-select form-select-sm">
                                   <option value="">AÑO COMPLETO - 2023</option>
                                   <option value="">SEMESTRE 1 - 2023 </option>
@@ -118,9 +363,12 @@
                                 </select>
                               </div>
                             </div>
+                            <div class="form-group row mt-3"></div>
                             <div class="form-group row">
-                              <label for="inputPassword" class="col-sm-3 col-form-label">Motivo</label>
-                              <div class="col-sm-9">
+                              <label for="inputPassword" class="col-xl-3 col-form-label">
+                                Motivo <span class="obligatorio">(*)</span>
+                              </label>
+                              <div class="col-xl-9">
                                 <select name="" id="" class="form-select form-select-sm">
                                   <option value="">Seleccionar motivo...</option>
                                   <option value="">ACADÉMICO</option>
@@ -128,8 +376,11 @@
                                   <option value="">CAMBIO INTERNO UCT</option>
                                 </select>
                               </div>
-                              <div class="col-sm-3 mt-2">Motivo Principal</div>
-                              <div class="col-sm-9 mt-2">
+                              <div class="col-12 mt-3"></div>
+                              <label for="inputPassword" class="col-xl-3 col-form-label">
+                                Motivo principal <span class="obligatorio">(*)</span>
+                                </label>
+                              <div class="col-xl-9">
                                 <select name="" id="" class="form-select form-select-sm" disabled>
                                   <option value="">Seleccionar motivo...</option>
                                   <option value="">ACADÉMICO</option>
@@ -137,11 +388,162 @@
                                   <option value="">CAMBIO INTERNO UCT</option>
                                 </select>
                               </div>
-                              <div class="col-sm-3 mt-2"></div>
-                              <div class="col-sm-9 mt-2">
+                              <div class="col-xl-3 mt-1"></div>
+                              <div class="col-xl-9 mt-1 mb-3">
                                 <button class="btn btn-primary btn-sm">
-                                  <i class="fa-solid fa-thumbtack m-icono"></i>Agregar
+                                  <i class="fa-solid fa-thumbtack m-icono"></i>Agregar a la lista
                                 </button>
+                              </div>
+                              <label for="inputPassword" class="col-form-label col-xl-3 col-xl-3">
+                                Lista de motivos <span class="obligatorio">(*)</span>
+                              </label>
+                              <div class="col-xl-9 col-12">
+                                <!--Lista de Motivos-->
+                                <div class="table-responsive tabla-institucional">
+                                  <table class="table tabla-motivos">
+                                    <thead>
+                                      <tr>
+                                        <th style="width: 110px">Motivos</th>
+                                        <th style="width: 210px">Descripción</th>
+                                        <th style="width: 110px">Acción</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>ACADÉMICO</td>
+                                      <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
+                                      <td>
+                                        <button class="btn btn-danger btn-sm">
+                                          <i class="fa-solid fa-xmark"></i> Quitar
+                                        </button>
+                                      </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="form-group row mt-3"></div>
+                              <label for="inputPassword" class="col-xl-3 col-form-label">Descripción de los motivos</label>
+                              <div class="col-xl-9">
+                                <textarea name="" id="" class="form-control" placeholder="Ingresar una breve descripción de sus motivos..."></textarea>
+                              </div>
+                            </div>
+                          </form>
+                        </section>
+                      </article>
+                    </div>
+
+                    <!--Seccion de reincorporacion-->
+                    <div id="seleccion-renuncia" class="seleccion-tipo-solicitud container-fluid">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-1"></div>
+                          <div class="col-10">
+                            <h3 class="contenedor-titulo-barra-progreso">Progreso de la Solicitud</h3>
+                            <div class="progress contenedor-barra-progreso">
+                              <div class="progress-bar" role="progressbar" style="width: 33.3%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">33%</div>
+                            </div>
+                          </div>
+                          <div class="col-1"></div>
+                        </div>
+                      </div>
+
+                      <article class="card">
+                        <section class="card-header titulo-formulario p-0">
+                          <h4>Solicitud de renuncia academica</h4>
+                        </section>
+                        <!--Cuerpo del formulario-->
+                        <section class="card-body">
+                          <form class="p-2">
+                            <div class="form-group row">
+                              <label for="staticEmail" class="col-xl-3 col-form-label">Fecha solicitud</label>
+                              <div class="col-xl-9">
+                                <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="10-12-2023">
+                              </div>
+                            </div>
+                            <div class="form-group row mt-3"></div>
+                            <div class="form-group row">
+                              <label for="staticEmail" class="col-xl-3 col-form-label">Semestre solicitud</label>
+                              <div class="col-xl-9">
+                                <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="SEGUNDO SEMESTRE DEL AÑO 2023">
+                              </div>
+                            </div>
+                            <div class="form-group row mt-3"></div>
+                            <div class="form-group row">
+                              <label for="inputPassword" class="col-xl-3 col-form-label">
+                                Proyección de la suspensión <span class="obligatorio">(*)</span>
+                              </label>
+                              <div class="col-xl-9">
+                                <select name="" id="" class="form-select form-select-sm">
+                                  <option value="">AÑO COMPLETO - 2023</option>
+                                  <option value="">SEMESTRE 1 - 2023 </option>
+                                  <option value="">SEMESTRE 2 - 2023</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row mt-3"></div>
+                            <div class="form-group row">
+                              <label for="inputPassword" class="col-xl-3 col-form-label">
+                                Motivo <span class="obligatorio">(*)</span>
+                              </label>
+                              <div class="col-xl-9">
+                                <select name="" id="" class="form-select form-select-sm">
+                                  <option value="">Seleccionar motivo...</option>
+                                  <option value="">ACADÉMICO</option>
+                                  <option value="">CAMBIO DE UNIVERSIDAD</option>
+                                  <option value="">CAMBIO INTERNO UCT</option>
+                                </select>
+                              </div>
+                              <div class="col-12 mt-3"></div>
+                              <label for="inputPassword" class="col-xl-3 col-form-label">
+                                Motivo principal <span class="obligatorio">(*)</span>
+                                </label>
+                              <div class="col-xl-9">
+                                <select name="" id="" class="form-select form-select-sm" disabled>
+                                  <option value="">Seleccionar motivo...</option>
+                                  <option value="">ACADÉMICO</option>
+                                  <option value="">CAMBIO DE UNIVERSIDAD</option>
+                                  <option value="">CAMBIO INTERNO UCT</option>
+                                </select>
+                              </div>
+                              <div class="col-xl-3 mt-1"></div>
+                              <div class="col-xl-9 mt-1 mb-3">
+                                <button class="btn btn-primary btn-sm">
+                                  <i class="fa-solid fa-thumbtack m-icono"></i>Agregar a la lista
+                                </button>
+                              </div>
+                              <label for="inputPassword" class="col-form-label col-xl-3 col-xl-3">
+                                Lista de motivos <span class="obligatorio">(*)</span>
+                              </label>
+                              <div class="col-xl-9 col-12">
+                                <!--Lista de Motivos-->
+                                <div class="table-responsive tabla-institucional">
+                                  <table class="table tabla-motivos">
+                                    <thead>
+                                      <tr>
+                                        <th style="width: 110px">Motivos</th>
+                                        <th style="width: 210px">Descripción</th>
+                                        <th style="width: 110px">Acción</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>ACADÉMICO</td>
+                                      <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
+                                      <td>
+                                        <button class="btn btn-danger btn-sm">
+                                          <i class="fa-solid fa-xmark"></i> Quitar
+                                        </button>
+                                      </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="form-group row mt-3"></div>
+                              <label for="inputPassword" class="col-xl-3 col-form-label">Descripción de los motivos</label>
+                              <div class="col-xl-9">
+                                <textarea name="" id="" class="form-control" placeholder="Ingresar una breve descripción de sus motivos..."></textarea>
                               </div>
                             </div>
                           </form>
@@ -169,6 +571,8 @@
       </article>
     </section>
   </main>
+  <script src="js/jquery-3.6.4.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
