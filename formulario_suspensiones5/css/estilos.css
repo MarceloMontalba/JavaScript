@@ -60,6 +60,11 @@ body {
   margin-right: .6rem;
 }
 
+/*Caja tipo solicitud*/
+.tarjeta-tipo-solicitud {
+  box-shadow: 0 0 4px #4c5354;
+}
+
 .tipo-solicitud-titulo {
   text-align: center;
   text-transform: uppercase;
@@ -88,4 +93,36 @@ body {
 .form-group {
   justify-content: center;
   align-items: center;
+}
+
+/*Tabla información academica*/
+.tabla-informacion-academica {
+  text-align: center;
+  box-shadow: 0 0 4px #4c5354;
+  margin-bottom: 2rem;
+}
+.tabla-informacion-academica th{
+  background-color: #0075b5 !important;
+  color: white !important;
+  text-transform: uppercase;
+  font-size: .77rem;
+}
+
+.tabla-informacion-academica td, .tabla-informacion-academica tbody{
+  background-color: #d4e3e5 !important;
+  font-size: .8rem;
+}
+
+/*Barra de Progreso*/
+.contenedor-barra-progreso {
+  margin: 0 0 1.6rem;
+}
+
+.contenedor-titulo-barra-progreso {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-transform: uppercase;
 }

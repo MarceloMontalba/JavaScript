@@ -36,8 +36,30 @@
             </h2>
             <div id="primerApartado" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
+                <!--Tabla con la información academica-->
+                <div class="table-responsive-md table-sm tabla-informacion-academica">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Registro</th>
+                        <th>Carrera</th>
+                        <th>Año Ingreso</th>
+                        <th>Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>01010101</td>
+                        <td>INGENIERÍA CIVIL EN INFORMATICA</td>
+                        <td>2023</td>
+                        <td>REGULAR</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
                 <!--Selección del tipo de formulario-->
-                <div class="card">
+                <div class="card tarjeta-tipo-solicitud">
                   <h3 class="tipo-solicitud-titulo">Tipo de solicitud</h3>
                   <div class="card-header tarjeta-tipo-solicitud-header">
                     <ul class="nav nav-tabs card-header-tabs">
@@ -55,6 +77,19 @@
                   <div class="card-body">
                     <!--Seccion de suspensiones academicas-->
                     <div id="seleccion-suspensiones container-fluid">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-1"></div>
+                          <div class="col-10">
+                            <h3 class="contenedor-titulo-barra-progreso">Progreso de la Solicitud</h3>
+                            <div class="progress contenedor-barra-progreso">
+                              <div class="progress-bar" role="progressbar" style="width: 33.3%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">33%</div>
+                            </div>
+                          </div>
+                          <div class="col-1"></div>
+                        </div>
+                      </div>
+
                       <article class="card">
                         <section class="card-header titulo-formulario p-0">
                           <h4>Solicitud de suspensión academica</h4>
