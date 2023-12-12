@@ -142,11 +142,65 @@ body {
 }
 
 /*Barra de Progreso*/
-.contenedor-barra-progreso {
-  margin: 0 0 3rem;
-  user-select: none;
-  user-drag: none;
-  -webkit-user-drag: none;
+.barra-progreso {
+  display: flex;
+  list-style: none;
+  margin-bottom: .5rem;
+  counter-reset: step;
+  padding: 0;
+  cursor: default;
+}
+
+.barra-progreso-opcion {
+  width: 100%;
+  text-align: center;
+  font-size: .7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.barra-progreso-opcion:before {
+  display: flex;
+  content: counter(step);
+  counter-increment: step;
+  width: 2rem;
+  height: 2rem;
+  box-shadow: 0px 0px .5rem #827f7f;
+  background-color: white;
+  margin: 0 auto .3rem;
+  border-radius: 6rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.barra-progreso-opcion:after {
+  display: block;
+  content: '';
+  height: .3rem;
+  width: 10rem;
+  box-shadow: 0px 0px .5rem #827f7f;
+  background-color: white;
+  position: absolute;
+  top: .9rem;
+  left: -50%;
+  z-index: 1;
+}
+
+.barra-progreso-opcion:first-child:after {
+  content: none;
+}
+
+.barra-progreso-opcion.barra-progreso-opcion-activo:before {
+  content: '✓';
+}
+
+.barra-progreso-opcion.barra-progreso-opcion-activo:before, 
+.barra-progreso-opcion.barra-progreso-opcion-activo:after {
+  background-color: #0075b5;
+  color: white;
 }
 
 .contenedor-titulo-barra-progreso {
@@ -212,3 +266,24 @@ body {
   resize: none;
 }
 
+.form-switch label, .form-switch .form-check-input{
+  cursor: pointer;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+.parrafo-info {
+  font-size: .8rem;
+  text-align: justify;
+  font-style: italic;
+}
+
+.rojo {
+  color: red;
+}
+
+.mensaje-confirmacion p, .mensaje-confirmacion li{
+  text-align: justify;
+  font-size: .8rem;
+}
