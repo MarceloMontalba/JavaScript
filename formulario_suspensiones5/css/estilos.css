@@ -62,7 +62,7 @@ body {
 
 /*Caja tipo solicitud*/
 .tarjeta-tipo-solicitud {
-  box-shadow: 0 0 4px #4c5354;
+  border-radius: 0 !important;
 }
 
 .tipo-solicitud-titulo {
@@ -193,5 +193,22 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Barra Progreso */
+.icono-subapartado {
+  margin-left: 1rem;
+}
+
+/*Entradas Formulario*/
+.formulario-llenar input[type="text"]{
+  font-size: .7rem;
+}
+
+.formulario-llenar select {
+  font-size: .7rem;
+}
+
+.formulario-llenar textarea {
+  font-size: .8rem;
+  height: 6rem;
+  resize: none;
+}
 
