@@ -11,17 +11,14 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
   <main class="container">
     <section class="row">
       <article class="container-fluid contenedor-principal col-12 col-md-9 col-lg-7">
         <div class="container contenedor-mensaje-solicitud">
           <h1>Solicitudes estudiantes</h1>
-        
           <p>En esta sección encontrarás el formulario mediante el cual puedes hacer una solicitud de <b>Reincorporación</b>, 
             <b>Suspensión</b> o <b>Renuncia</b>. Además puedes consultar el estado en que se encuentra tu solicitud.
           </p>
-    
           <p>
             Para visualizar el contenido solo debes hacer click sobre el título de tu interés el cual desplegará el 
             contenido deseado.
@@ -38,35 +35,97 @@
             <div id="primerApartado" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body p-0">
                 <!--Selección del tipo de formulario-->
-                <div class="card tarjeta-tipo-solicitud">
+                <div class="card tarjeta-tipo-solicitud-seleccion rounded-0">
                   <div class="card-header tarjeta-tipo-solicitud-header">
-                    <ul class="nav nav-tabs card-header-tabs ">
-                      <li class="nav-item">
-                        <a class="nav-link btn-solicitud" href="#" id="btn-suspension">Suspensión</a>
+                    <ul class="nav nav-tabs seleccion-formulario card-header-tabs">
+                      <li class="nav-item seleccion-formulario">
+                        <a class="nav-link btn-solicitud active" id="btn-instrucciones">Instrucciones</a>
+                      </li>
+                      <li class="nav-item seleccion-formulario">
+                        <a class="nav-link btn-solicitud" id="btn-suspension">Suspensión</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link btn-solicitud" href="#" id="btn-reincorporacion">Reincorporación</a>
+                        <a class="nav-link btn-solicitud" id="btn-reincorporacion">Reincorporación</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link btn-solicitud" href="#" id="btn-renuncia">Renuncia</a>
+                        <a class="nav-link btn-solicitud" id="btn-renuncia">Renuncia</a>
                       </li>
                     </ul>
                   </div>
                   <div class="card-body p-1">
+                    <!--Div usado para hacer un scroll automatico-->
+                    <div id="posicionador-scroll"></div>
                     <!--Seccion de suspensiones academicas-->
-                    <div class="container-fluid mensaje-bienvenida">
-                      <p>Realiza tus trámites académicos de manera fácil y rápida. Aquí puedes solicitar una reincorporación, suspensión o renuncia. Consulta el estado de tu solicitud en cualquier momento.</p>
-                      <p>Selecciona una opción del menú para comenzar con tú solicitud.</p>
+                    <div id="mensaje-bienvenida" class="container-fluid mensaje-bienvenida p-5">
+                      <div class="contenedor-logo">
+                        <img class="logo" src="./img/logo_dara.png"/>
+                      </div>
+
+                      <p>Estimado [Nombre del Estudiante],</p>
+                      <p>
+                        Queremos informarte sobre las opciones disponibles para ti en el presente módulo con relación 
+                        a tu situación académica. Por favor, lee cuidadosamente las siguientes opciones y 
+                        selecciona la que mejor se adapte a tu situación actual.
+                      </p>
+
+                      <div class="card caja-bienvenida-reincorporacion">
+                        <div class="card-header pt-1 pb-1">
+                          <h5>Reincorporación</h5>
+                        </div>
+                        <div class="card-body p-3 pt-1 pb-1">
+                          <p>
+                            Si has suspendido tus estudios anteriormente y ahora estás listo para regresar, 
+                            puedes seleccionar la opción de <span class="destacado">reincorporación</span>.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="card caja-bienvenida-suspension">
+                        <div class="card-header pt-1 pb-1">
+                          <h5>Suspensión</h5>
+                        </div>
+                        <div class="card-body p-3 pt-1 pb-1">
+                          <p>
+                            Si necesitas tomar un receso temporal en tus estudios debido a razones personales, 
+                            médicas u otras circunstancias, puedes optar por 
+                            <span class="destacado">supender</span> tus estudios.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="card caja-bienvenida-renuncia">
+                        <div class="card-header pt-1 pb-1">
+                          <h5>Renuncia</h5>
+                        </div>
+                        <div class="card-body p-3 pt-1 pb-1">
+                          <p>
+                            Si has decidido tomar un camino diferente y dejar tus estudios de manera definitiva, 
+                            puedes seleccionar la opción de <span class="destacado rojo">renunciar</span> a la carrera.
+                          </p>
+                        </div>
+                      </div>
+
+                      <p>
+                        Por favor, toma el tiempo necesario para considerar cada opción antes de tomar una decisión. 
+                        Estamos aquí para apoyarte en todo el proceso y responder cualquier pregunta que puedas tener.
+                        Si tienes alguna duda o necesitas más información, no dudes en ponerte en contacto con nuestro 
+                        equipo de asesoramiento académico desde nuestro correo electrónico <span class="negrita">dara@uctemuco.cl</span>.
+                      </p>
+
+                      <p class="remitente">Atentamente,<br>
+                        Dirección de Admisión y Registros Académicos<br>
+                        <span class="negrita">Universidad Católica de Temuco</span>
+                      </p>
                     </div>
 
                     <div id="seleccion-suspensiones" class="seleccion-tipo-solicitud container-fluid">
                       <div class="container mb-3">
                         <div class="row">
                           <div class="col-1"></div>
-                          <div class="col-10">
+                          <div class="col-10 mt-3">
                             <h3 class="contenedor-titulo-barra-progreso mb-4">Progreso de la Solicitud</h3>
                             <ul class="barra-progreso">
-                              <li class="barra-progreso-opcion">paso 1</li>
+                              <li class="barra-progreso-opcion barra-progreso-opcion-activo">paso 1</li>
                               <li class="barra-progreso-opcion">paso 2</li>
                               <li class="barra-progreso-opcion">paso 3</li>
                             </ul>
@@ -75,7 +134,7 @@
                       </div>
 
                       <!--Suspension Academica-->
-                      <article class="card" id="suspension-academica">
+                      <article class="card paso-suspensiones" id="suspension-academica">
                         <section class="card-header titulo-formulario p-0">
                           <h4>Solicitud de suspensión academica (1/3)</h4>
                         </section>
@@ -186,7 +245,7 @@
                                 <div class="accordion-item">
                                   <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button p-2" type="button" data-bs-toggle="collapse" data-bs-target="#detalles-suspensiones-desplegable" aria-expanded="true" aria-controls="detalles-suspensiones-desplegable">
-                                      <i class="fa-solid fa-pencil m-icono icono-subapartado"></i> Detalles de la Solicitud <span class="obligatorio">(*)</span>
+                                      <i class="fa-solid fa-calendar-days m-icono icono-subapartado"></i> Tiempo de la Suspensión <span class="obligatorio">(*)</span>
                                     </button>
                                   </h2>
                                   <div id="detalles-suspensiones-desplegable" class="accordion-collapse collapse show" aria-labelledby="headingOne">
@@ -236,6 +295,17 @@
                                   </h2>
                                   <div id="motivos-suspensiones-desplegable" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                                     <div class="accordion-body p-0">
+                                      
+                                      <div class="form-group row mt-1">
+                                        <div class="form-group row col-xl-12">
+                                          <div class="col-12 mensaje-bienvenida">
+                                            <p class="remitente">En esta sección, se le solicita que seleccione al menos un motivo y luego especifique el motivo particular, 
+                                              para finalmente agregarlo a la lista con el botón <span class="negrita">Agregar</span>.
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+
                                       <div class="form-group row mt-2">
                                         <div class="form-group row col-xl-5">
                                           <label for="inputPassword" class="col-12 col-form-label p-1">
@@ -254,7 +324,7 @@
                                         <div class="form-group row col-xl-7">
                                           <label for="inputPassword" class="col-12 col-form-label p-1">
                                             Motivo principal <span class="obligatorio">(*)</span>
-                                            </label>
+                                          </label>
                                           <div class="col-12 p-1">
                                             <select name="" id="" class="form-select form-select-sm" disabled>
                                               <option value="">Seleccionar motivo...</option>
@@ -266,10 +336,21 @@
                                         </div>
                                       </div>
 
-                                      <div class="form-group row mt-2">
-                                        <div class="form-group row col-12">
+                                      <div class="form-group row mt-3 mb-3">
+                                        <div class="form-group row col-12 px-3">
+                                          <div>
+                                            <button type="button" class="boton boton-verde boton-chico">
+                                              <i class="fa-solid fa-plus"></i> Agregar
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+
+
+                                      <div class="form-group row mt-3 mb-3">
+                                        <div class="form-group row col-11">
                                           <label for="inputPassword" class="col-form-label col-12">
-                                            Lista de motivos <span class="obligatorio">(*)</span>
+                                            Lista de motivos
                                           </label>
                                           <div class="col-12">
                                             <!--Lista de Motivos-->
@@ -277,9 +358,9 @@
                                               <table class="table tabla-motivos">
                                                 <thead>
                                                   <tr>
-                                                    <th style="width: 110px">Motivos</th>
-                                                    <th style="width: 210px">Descripción</th>
-                                                    <th style="width: 110px">Acción</th>
+                                                    <th>Motivos</th>
+                                                    <th>Descripción</th>
+                                                    <th>Acción</th>
                                                   </tr>
                                                 </thead>
                                                 <tbody>
@@ -287,7 +368,34 @@
                                                     <td>ACADÉMICO</td>
                                                   <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
                                                   <td>
-                                                    <button class="btn btn-danger btn-sm">
+                                                    <button class="boton boton-rojo boton-chico">
+                                                      <i class="fa-solid fa-xmark"></i> Quitar
+                                                    </button>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>ACADÉMICO</td>
+                                                  <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
+                                                  <td>
+                                                    <button class="boton boton-rojo boton-chico">
+                                                      <i class="fa-solid fa-xmark"></i> Quitar
+                                                    </button>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>ACADÉMICO</td>
+                                                  <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
+                                                  <td>
+                                                    <button class="boton boton-rojo boton-chico">
+                                                      <i class="fa-solid fa-xmark"></i> Quitar
+                                                    </button>
+                                                  </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>ACADÉMICO</td>
+                                                  <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
+                                                  <td>
+                                                    <button class="boton boton-rojo boton-chico">
                                                       <i class="fa-solid fa-xmark"></i> Quitar
                                                     </button>
                                                   </td>
@@ -315,10 +423,7 @@
                             
                             <div class="container mt-3 d-flex justify-content-center">
                               <div>
-                                <button class="btn btn-sm btn-primary">
-                                  <i class="fa-solid fa-broom m-icono"></i>Limpiar
-                                </button>
-                                <button class="btn btn-sm btn-success pl-3 boton-continuar" id="btn-continuar-suspension">
+                                <button class="boton boton-azul pl-3 boton-secuencia boton-continua" type="button" id="btn-continuar-suspension" data-to_step="2" data-step="1">
                                   Continuar <i class="fa-solid fa-caret-right"></i>
                                 </button>
                               </div>
@@ -327,8 +432,73 @@
                         </section>
                       </article>
 
+                      <!--Aviso de suspension de Beneficios-->
+                      <article class="card paso-suspensiones" id="aviso-suspension-beneficios1">
+                        <section class="card-header titulo-formulario p-0">
+                          <h4>Solicitud de suspensión de beneficios (2/3)</h4>
+                        </section>
+                        <!--Cuerpo del formulario-->
+                        <section class="card-body p-0">
+                          <div class="container-fluid mensaje-bienvenida mensaje-bienestar p-5">
+                            <div class="contenedor-logo">
+                              <img class="logo" src="./img/logo_bienestar_estudiantil.png"/>
+                            </div>
+
+                            <p>Estimado [nombre del estudiante],</p>
+
+                            <p>Te informamos que, debido a que cuentas con beneficios MINEDUC, hemos agregado un paso adicional 
+                              al proceso actual. Esto con el objetivo de garantizar un tratamiento adecuado de dichos beneficios 
+                              durante tu solicitud de suspensión académica.
+                            </p>
+
+                            <p>Este paso adicional es esencial para asegurar la correcta <span class="negrita text-uppercase">conservación</span> 
+                              de tus beneficios y así poder retomarlos en algún futuro posterior. En este paso y/o apartado, te mostraremos 
+                              los beneficios que posees en la actualidad, para que indiques qué deseas hacer con ellos.
+                            </p>
+                                                        
+                            <p><span class="negrita text-uppercase">Requisito Previo:</span> Queremos informarte que antes de realizar este paso, es 
+                              necesario que completes el Formulario de Suspensión de Beneficios proporcionado por el MINEDUC. En caso de que 
+                              aún no lo hayas hecho, puedes encontrarlo en 
+                              <a href="https://portal.beneficiosestudiantiles.cl/sites/default/files/formulario_suspensiones_2023_v2.pdf" target="_blank">
+                                https://portal.beneficiosestudiantiles.cl/sites/default/files/formulario_suspensiones_2023_v2.pdf
+                              </a>. Rellenar este formulario es un requisito imprescindible, ya que en el siguiente paso te solicitaremos 
+                              adjuntarlo junto con otra información relevante. Posteriormente, estos datos serán enviados al MINEDUC 
+                              para que procesen tu solicitud de suspensión de beneficios.
+                            </p>
+                                 
+                            <div class="contenedor-imagenes-formulario-beneficios">
+                              <img src="img/formulario_MINEDUC_1.png">
+                              <img src="img/formulario_MINEDUC_2.png">
+                            </div>
+                            <p class="remitente text-center negrita mb-4 mt-2">Formulario de Suspensión de Beneficios del MINEDUC.</p>
+
+                            <p>De antemano agradecemos tu colaboración. Ante cualquier duda con respecto a la suspensión de tus beneficios, no dudes en 
+                              comunicarte con nuestro equipo al correo electrónico <span class="negrita">bienestarestudiantil@uct.cl</span>, que 
+                              está disponible para ayudarte.
+                            </p>
+
+                            <p class="remitente">Atentamente,<br>
+                              Dirección de Bienestar Estudiantil<br>
+                              <span class="negrita">Universidad Católica de Temuco</span>
+                            </p>
+
+                            <div class="container mt-5 d-flex justify-content-center">
+                              <div>
+                                <button class="boton boton-azul boton-secuencia boton-regresa" type="button" id="btn-regresar-suspension-academica" data-step="2">
+                                  <i class="fa-solid fa-caret-left m-icono"></i>Regresar
+                                </button>
+                                <button class="boton boton-azul pl-3 boton-secuencia boton-continua" type="button" id="btn-continuar-suspension2" data-step="1">
+                                  Continuar <i class="fa-solid fa-caret-right"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </article>
+
+
                       <!--Suspension de Beneficios-->
-                      <article class="card" id="suspension-beneficios1">
+                      <article class="card paso-suspensiones" id="suspension-beneficios1">
                         <section class="card-header titulo-formulario p-0">
                           <h4>Solicitud de suspensión de beneficios (2/3)</h4>
                         </section>
@@ -340,7 +510,7 @@
                                 <div class="accordion-item">
                                   <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button p-2" type="button" data-bs-toggle="collapse" data-bs-target="#detalles-suspensiones-beneficios-desplegable" aria-expanded="true" aria-controls="detalles-suspensiones-beneficios-desplegable">
-                                      <i class="fa-solid fa-paperclip m-icono icono-subapartado"></i> Detalles de la solicitud <span class="obligatorio">(*)</span>
+                                      <i class="fa-solid fa-piggy-bank m-icono icono-subapartado"></i> Beneficios actuales<span class="obligatorio">(*)</span>
                                     </button>
                                   </h2>
                                   <div id="detalles-suspensiones-beneficios-desplegable" class="accordion-collapse collapse show" aria-labelledby="headingOne">
@@ -356,59 +526,94 @@
                                               <table class="table tabla-motivos">
                                                 <thead>
                                                   <tr>
-                                                    <th style="width: 250px">Beneficio</th>
-                                                    <th style="width: 110px">Monto Anual</th>
-                                                    <th style="width: 130px">Monto Mensual</th>
-                                                    <th style="width: 130px">Acción</th>
+                                                    <th>Beneficio</th>
+                                                    <th style="width: 14rem">Suspender</th>
                                                   </tr>
                                                 </thead>
                                                 <tbody>
                                                   <tr>
                                                     <td>GRATUIDAD ARANCEL MINEDUC</td>
-                                                    <td>$3.500.000</td>
-                                                    <td>$350.000</td>
                                                     <td>
-                                                      <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                        <label class="form-check-label" for="flexSwitchCheckDefault">Suspender</label>
+                                                      <div class="d-flex justify-content-center">
+                                                        <div class="form-check">
+                                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                          <label class="form-check-label" for="flexRadioDefault1">
+                                                            Si
+                                                          </label>
+                                                        </div>
+
+                                                        <div class="form-check mx-3">
+                                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                          <label class="form-check-label" for="flexRadioDefault2">
+                                                            No
+                                                          </label>
+                                                        </div>
                                                       </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td>GRATUIDAD ARANCEL MINEDUC</td>
-                                                    <td>$3.500.000</td>
-                                                    <td>$350.000</td>
+                                                    <td>GRATUIDAD MATRICULA MINEDUC</td>
                                                     <td>
-                                                      <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
-                                                        <label class="form-check-label" for="flexSwitchCheckDefault2">Suspender</label>
+                                                      <div class="d-flex justify-content-center">
+                                                        <div class="form-check">
+                                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                          <label class="form-check-label" for="flexRadioDefault1">
+                                                            Si
+                                                          </label>
+                                                        </div>
+
+                                                        <div class="form-check mx-3">
+                                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                          <label class="form-check-label" for="flexRadioDefault2">
+                                                            No
+                                                          </label>
+                                                        </div>
                                                       </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td>GRATUIDAD ARANCEL MINEDUC</td>
-                                                    <td>$3.500.000</td>
-                                                    <td>$350.000</td>
+                                                    <td>BRECHA GRATUIDAD ARANCEL UCT</td>
                                                     <td>
-                                                      <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault3">
-                                                        <label class="form-check-label" for="flexSwitchCheckDefault3">Suspender</label>
+                                                      <div class="d-flex justify-content-center">
+                                                        <div class="form-check">
+                                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                          <label class="form-check-label" for="flexRadioDefault1">
+                                                            Si
+                                                          </label>
+                                                        </div>
+
+                                                        <div class="form-check mx-3">
+                                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                          <label class="form-check-label" for="flexRadioDefault2">
+                                                            No
+                                                          </label>
+                                                        </div>
                                                       </div>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <td>GRATUIDAD ARANCEL MINEDUC</td>
-                                                    <td>$3.500.000</td>
-                                                    <td>$350.000</td>
+                                                    <td>TARJETA ALIMENTACION</td>
                                                     <td>
-                                                      <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault4">
-                                                        <label class="form-check-label" for="flexSwitchCheckDefault4">Suspender</label>
+                                                      <div class="d-flex justify-content-center">
+                                                        <div class="form-check">
+                                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                          <label class="form-check-label" for="flexRadioDefault1">
+                                                            Si
+                                                          </label>
+                                                        </div>
+
+                                                        <div class="form-check mx-3">
+                                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                          <label class="form-check-label" for="flexRadioDefault2">
+                                                            No
+                                                          </label>
+                                                        </div>
                                                       </div>
                                                     </td>
                                                   </tr>
                                                 </tbody>
                                               </table>
+
                                             </div>
                                           </div>
                                         </div>
@@ -427,6 +632,17 @@
                                           </div>
                                         </div>
                                       </div>
+
+                                      <div class="form-group row mt-4 mb-3">
+                                        <div class="form-group row col-6">
+                                          <label for="inputPassword" class="col-form-label col-12">
+                                            N° de solicitudes de suspensión realiazas anteriormente
+                                          </label>
+                                          <div class="col-12">
+                                            <input class="form-control form-control-sm" id="formFileSm" type="text" disabled value="3">
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -435,13 +651,10 @@
                             
                             <div class="container mt-3 d-flex justify-content-center">
                               <div>
-                                <button class="btn btn-sm btn-primary">
-                                  <i class="fa-solid fa-broom m-icono"></i>Limpiar
-                                </button>
-                                <button class="btn btn-sm btn-warning boton-continuar" id="btn-regresar-suspension-academica">
+                                <button class="boton boton-azul boton-secuencia boton-regresa" type="button" id="btn-aviso-suspension-beneficios1" data-step="3">
                                   <i class="fa-solid fa-caret-left m-icono"></i>Regresar
                                 </button>
-                                <button class="btn btn-sm btn-success pl-3 boton-continuar" id="btn-continuar-confirmacion1">
+                                <button class="boton boton-azul pl-3 boton-secuencia boton-continua" type="button" id="btn-continuar-confirmacion1" data-step="2">
                                   Continuar <i class="fa-solid fa-caret-right"></i>
                                 </button>
                               </div>
@@ -451,13 +664,20 @@
                       </article>
 
                       <!--Confirmación-->
-                      <article class="card" id="suspension-confirmacion1">
+                      <article class="card paso-suspensiones" id="suspension-confirmacion1">
                         <section class="card-header titulo-formulario p-0">
                           <h4>Confirmación de los datos (3/3)</h4>
                         </section>
                         <!--Cuerpo del formulario-->
-                        <section class="card-body p-5 mensaje-confirmacion">
-                          <p>Estimado [Nombre del Usuario],</p>
+                        <section class="card-body p-5 mensaje-bienvenida">
+                          <div class="contenedor-logo logo-uct">
+                            <img class="logo" src="./img/logo_uct.png"/>
+                          </div>
+
+                          <p class="text-uppercase rojo negrita">Importante</p>
+                          <p>
+                            Estimado [Nombre del Usuario],
+                          </p>
                           <p>Antes de proceder, queremos asegurarnos de que todos los datos ingresados sean precisos y 
                             válidos. Tu seguridad y la integridad de la información son nuestras prioridades.</p>
 
@@ -471,28 +691,22 @@
                           <p>Por favor, toma un momento para repasar la información ingresada y asegurarte de su 
                             exactitud.</p> 
 
-                          <p>Botón de Confirmación: [Confirmar Datos]</p>
+                          <p>Botón de Confirmación: <span class="negrita">[Confirmar Datos]</span></p>
 
                           <p>Al confirmar, aceptas que la información proporcionada es correcta y estás de acuerdo 
                             con los términos y condiciones establecidos. Gracias por tu cooperación y compromiso 
                             con la precisión de los datos.</p>
 
-                          <p>Si tienes alguna inquietud o necesitas asistencia, no dudes en ponerte en contacto 
-                            con nuestro equipo de soporte.</p>
-
-                          <p>Atentamente,</p>
-
-                          <p>[Nombre de la Plataforma/Servicio]</p>
+                          <p class="remitente">Atentamente,<br>
+                            <span class="negrita">Universidad Católica de Temuco</span>
+                          </p>
 
                           <div class="container mt-3 d-flex justify-content-center">
-                            <div>
-                              <button class="btn btn-sm btn-primary">
-                                <i class="fa-solid fa-broom m-icono"></i>Limpiar
-                              </button>
-                              <button class="btn btn-sm btn-warning boton-continuar" id="btn-regresar-suspension-beneficios1">
+                            <div class="mt-3">
+                              <button class="boton boton-azul boton-secuencia boton-regresa" type="button" id="btn-regresar-suspension-beneficios1" data-step="3">
                                 <i class="fa-solid fa-caret-left m-icono"></i>Regresar
                               </button>
-                              <button class="btn btn-sm btn-success pl-3">
+                              <button class="boton boton-verde btn-success pl-3">
                                 <i class="fa-solid fa-check m-icono"></i>Confirmar datos
                               </button>
                             </div>
@@ -500,248 +714,21 @@
                         </section>
                       </article>
                     </div>
-
                     <!--Seccion de reincorporacion-->
                     <div id="seleccion-reincorporacion" class="seleccion-tipo-solicitud container-fluid">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-1"></div>
-                          <div class="col-10">
-                            <h3 class="contenedor-titulo-barra-progreso">Progreso de la Solicitud</h3>
-                            <div class="progress contenedor-barra-progreso">
-                              <div class="progress-bar" role="progressbar" style="width: 33.3%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">33%</div>
-                            </div>
-                          </div>
-                          <div class="col-1"></div>
-                        </div>
-                      </div>
 
-                      <article class="card">
-                        <section class="card-header titulo-formulario p-0">
-                          <h4>Solicitud de Reincorporación academica</h4>
-                        </section>
-                        <!--Cuerpo del formulario-->
-                        <section class="card-body">
-                          <form class="p-2">
-                            <div class="form-group row">
-                              <label for="staticEmail" class="col-xl-3 col-form-label">Fecha solicitud</label>
-                              <div class="col-xl-9">
-                                <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="10-12-2023">
-                              </div>
-                            </div>
-                            <div class="form-group row mt-3"></div>
-                            <div class="form-group row">
-                              <label for="staticEmail" class="col-xl-3 col-form-label">Semestre solicitud</label>
-                              <div class="col-xl-9">
-                                <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="SEGUNDO SEMESTRE DEL AÑO 2023">
-                              </div>
-                            </div>
-                            <div class="form-group row mt-3"></div>
-                            <div class="form-group row">
-                              <label for="inputPassword" class="col-xl-3 col-form-label">
-                                Proyección de la suspensión <span class="obligatorio">(*)</span>
-                              </label>
-                              <div class="col-xl-9">
-                                <select name="" id="" class="form-select form-select-sm">
-                                  <option value="">AÑO COMPLETO - 2023</option>
-                                  <option value="">SEMESTRE 1 - 2023 </option>
-                                  <option value="">SEMESTRE 2 - 2023</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="form-group row mt-3"></div>
-                            <div class="form-group row">
-                              <label for="inputPassword" class="col-xl-3 col-form-label">
-                                Motivo <span class="obligatorio">(*)</span>
-                              </label>
-                              <div class="col-xl-9">
-                                <select name="" id="" class="form-select form-select-sm">
-                                  <option value="">Seleccionar motivo...</option>
-                                  <option value="">ACADÉMICO</option>
-                                  <option value="">CAMBIO DE UNIVERSIDAD</option>
-                                  <option value="">CAMBIO INTERNO UCT</option>
-                                </select>
-                              </div>
-                              <div class="col-12 mt-3"></div>
-                              <label for="inputPassword" class="col-xl-3 col-form-label">
-                                Motivo principal <span class="obligatorio">(*)</span>
-                                </label>
-                              <div class="col-xl-9">
-                                <select name="" id="" class="form-select form-select-sm" disabled>
-                                  <option value="">Seleccionar motivo...</option>
-                                  <option value="">ACADÉMICO</option>
-                                  <option value="">CAMBIO DE UNIVERSIDAD</option>
-                                  <option value="">CAMBIO INTERNO UCT</option>
-                                </select>
-                              </div>
-                              <div class="col-xl-3 mt-1"></div>
-                              <div class="col-xl-9 mt-1 mb-3">
-                                <button class="btn btn-primary btn-sm">
-                                  <i class="fa-solid fa-thumbtack m-icono"></i>Agregar a la lista
-                                </button>
-                              </div>
-                              <label for="inputPassword" class="col-form-label col-xl-3 col-xl-3">
-                                Lista de motivos <span class="obligatorio">(*)</span>
-                              </label>
-                              <div class="col-xl-9 col-12">
-                                <!--Lista de Motivos-->
-                                <div class="table-responsive tabla-institucional">
-                                  <table class="table tabla-motivos">
-                                    <thead>
-                                      <tr>
-                                        <th style="width: 110px">Motivos</th>
-                                        <th style="width: 210px">Descripción</th>
-                                        <th style="width: 110px">Acción</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>ACADÉMICO</td>
-                                      <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
-                                      <td>
-                                        <button class="btn btn-danger btn-sm">
-                                          <i class="fa-solid fa-xmark"></i> Quitar
-                                        </button>
-                                      </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                              <div class="form-group row mt-3"></div>
-                              <label for="inputPassword" class="col-xl-3 col-form-label">Descripción de los motivos</label>
-                              <div class="col-xl-9">
-                                <textarea name="" id="" class="form-control" placeholder="Ingresar una breve descripción de sus motivos..."></textarea>
-                              </div>
-                            </div>
-                          </form>
-                        </section>
-                      </article>
                     </div>
 
                     <!--Seccion de reincorporacion-->
                     <div id="seleccion-renuncia" class="seleccion-tipo-solicitud container-fluid">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-1"></div>
-                          <div class="col-10">
-                            <h3 class="contenedor-titulo-barra-progreso">Progreso de la Solicitud</h3>
-                            <div class="progress contenedor-barra-progreso">
-                              <div class="progress-bar" role="progressbar" style="width: 33.3%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">33%</div>
-                            </div>
-                          </div>
-                          <div class="col-1"></div>
-                        </div>
-                      </div>
 
-                      <article class="card">
-                        <section class="card-header titulo-formulario p-0">
-                          <h4>Solicitud de renuncia academica</h4>
-                        </section>
-                        <!--Cuerpo del formulario-->
-                        <section class="card-body">
-                          <form class="p-2">
-                            <div class="form-group row">
-                              <label for="staticEmail" class="col-xl-3 col-form-label">Fecha solicitud</label>
-                              <div class="col-xl-9">
-                                <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="10-12-2023">
-                              </div>
-                            </div>
-                            <div class="form-group row mt-3"></div>
-                            <div class="form-group row">
-                              <label for="staticEmail" class="col-xl-3 col-form-label">Semestre solicitud</label>
-                              <div class="col-xl-9">
-                                <input type="text" disabled class="form-control form-control-sm" id="staticEmail" value="SEGUNDO SEMESTRE DEL AÑO 2023">
-                              </div>
-                            </div>
-                            <div class="form-group row mt-3"></div>
-                            <div class="form-group row">
-                              <label for="inputPassword" class="col-xl-3 col-form-label">
-                                Proyección de la suspensión <span class="obligatorio">(*)</span>
-                              </label>
-                              <div class="col-xl-9">
-                                <select name="" id="" class="form-select form-select-sm">
-                                  <option value="">AÑO COMPLETO - 2023</option>
-                                  <option value="">SEMESTRE 1 - 2023 </option>
-                                  <option value="">SEMESTRE 2 - 2023</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="form-group row mt-3"></div>
-                            <div class="form-group row">
-                              <label for="inputPassword" class="col-xl-3 col-form-label">
-                                Motivo <span class="obligatorio">(*)</span>
-                              </label>
-                              <div class="col-xl-9">
-                                <select name="" id="" class="form-select form-select-sm">
-                                  <option value="">Seleccionar motivo...</option>
-                                  <option value="">ACADÉMICO</option>
-                                  <option value="">CAMBIO DE UNIVERSIDAD</option>
-                                  <option value="">CAMBIO INTERNO UCT</option>
-                                </select>
-                              </div>
-                              <div class="col-12 mt-3"></div>
-                              <label for="inputPassword" class="col-xl-3 col-form-label">
-                                Motivo principal <span class="obligatorio">(*)</span>
-                                </label>
-                              <div class="col-xl-9">
-                                <select name="" id="" class="form-select form-select-sm" disabled>
-                                  <option value="">Seleccionar motivo...</option>
-                                  <option value="">ACADÉMICO</option>
-                                  <option value="">CAMBIO DE UNIVERSIDAD</option>
-                                  <option value="">CAMBIO INTERNO UCT</option>
-                                </select>
-                              </div>
-                              <div class="col-xl-3 mt-1"></div>
-                              <div class="col-xl-9 mt-1 mb-3">
-                                <button class="btn btn-primary btn-sm">
-                                  <i class="fa-solid fa-thumbtack m-icono"></i>Agregar a la lista
-                                </button>
-                              </div>
-                              <label for="inputPassword" class="col-form-label col-xl-3 col-xl-3">
-                                Lista de motivos <span class="obligatorio">(*)</span>
-                              </label>
-                              <div class="col-xl-9 col-12">
-                                <!--Lista de Motivos-->
-                                <div class="table-responsive tabla-institucional">
-                                  <table class="table tabla-motivos">
-                                    <thead>
-                                      <tr>
-                                        <th style="width: 110px">Motivos</th>
-                                        <th style="width: 210px">Descripción</th>
-                                        <th style="width: 110px">Acción</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>ACADÉMICO</td>
-                                      <td>BAJO REMDIMIENTO EN CURSOS DE CIENCIAS BÁSICAS</td>
-                                      <td>
-                                        <button class="btn btn-danger btn-sm">
-                                          <i class="fa-solid fa-xmark"></i> Quitar
-                                        </button>
-                                      </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                              <div class="form-group row mt-3"></div>
-                              <label for="inputPassword" class="col-xl-3 col-form-label">Descripción de los motivos</label>
-                              <div class="col-xl-9">
-                                <textarea name="" id="" class="form-control" placeholder="Ingresar una breve descripción de sus motivos..."></textarea>
-                              </div>
-                            </div>
-                          </form>
-                        </section>
-                      </article>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item rounded-0">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed b-apartado" type="button" data-bs-toggle="collapse" data-bs-target="#segundoApartado" aria-expanded="true" aria-controls="segundoApartado">
                 <i class="fa-solid fa-list-check m-icono"></i> Resultados de la Solicitud

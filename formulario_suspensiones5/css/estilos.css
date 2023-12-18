@@ -65,6 +65,13 @@ body {
   border-radius: 0 !important;
 }
 
+.tarjeta-tipo-solicitud-seleccion .seleccion-formulario li {
+  cursor: pointer;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
 .tipo-solicitud-titulo {
   text-align: center;
   text-transform: uppercase;
@@ -106,7 +113,6 @@ body {
 /*Tabla institucional */
 .tabla-institucional {
   text-align: center;
-  box-shadow: 0 0 4px #4c5354;
 }
 .tabla-institucional th{
   background-color: #0075b5 !important;
@@ -114,10 +120,16 @@ body {
   text-transform: uppercase;
   font-size: .77rem;
 }
-
 .tabla-institucional td, .tabla-institucional tbody{
-  background-color: #d4e3e5 !important;
   font-size: .8rem;
+}
+
+.tabla-institucional tr:nth-child(odd) td{
+  background-color: #f5f5f5dc;
+}
+
+.tabla-institucional tr:nth-child(even) td{
+  background-color: #ffffffff;
 }
 
 .tabla-info-academica {
@@ -125,30 +137,49 @@ body {
 }
 
 .tabla-info-academica th{
-  font-size: .77rem;
+  font-size: .80rem;
 }
 
 .tabla-info-academica td, .tabla-info-academica tbody{
-  background-color: #d4e3e5 !important;
   font-size: .8rem;
 }
+.tabla-institucional {
+  overflow-x: auto;
+}
 
+.tabla-motivos {
+  width: 100%;
+}
 .tabla-motivos th{
   font-size: .6rem;
 }
 .tabla-motivos td, .tabla-motivos tbody{
-  background-color: white !important;
   font-size: .7rem;
+}
+
+.tabla-beneficios .fila-accion td{
+  background-color: #d7dbdd !important;
+}
+
+.tabla-beneficios, .tabla-beneficios .input{
+  font-size: .9rem;
+}
+
+.tabla-beneficios th{
+  padding-top: .5rem 0;
 }
 
 /*Barra de Progreso*/
 .barra-progreso {
   display: flex;
   list-style: none;
-  margin-bottom: .5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   counter-reset: step;
   padding: 0;
-  cursor: default;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .barra-progreso-opcion {
@@ -164,8 +195,8 @@ body {
   display: flex;
   content: counter(step);
   counter-increment: step;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   box-shadow: 0px 0px .5rem #827f7f;
   background-color: white;
   margin: 0 auto .3rem;
@@ -174,17 +205,44 @@ body {
   align-items: center;
   position: relative;
   z-index: 2;
+  font-size: .9rem;
+}
+
+/*Tamaño conector de señalador de multipasos*/
+@media (max-width: 600px){
+  .barra-progreso-opcion:after {
+    width: 7rem;
+  }
+}
+@media (min-width: 600px ) and (max-width: 1000px){
+  .barra-progreso-opcion:after {
+    width: 8rem;
+  }
+}
+@media (min-width: 1000px ) and (max-width: 1300px){
+  .barra-progreso-opcion:after {
+    width: 9rem;
+  }
+}
+@media (min-width: 1300px ) and (max-width: 1600px){
+  .barra-progreso-opcion:after {
+    width: 11rem;
+  }
+}
+@media (min-width: 1600px ){
+  .barra-progreso-opcion:after {
+    width: 12rem;
+  }
 }
 
 .barra-progreso-opcion:after {
   display: block;
   content: '';
   height: .3rem;
-  width: 10rem;
   box-shadow: 0px 0px .5rem #827f7f;
   background-color: white;
   position: absolute;
-  top: .9rem;
+  top: 1.2rem;
   left: -50%;
   z-index: 1;
 }
@@ -192,22 +250,31 @@ body {
 .barra-progreso-opcion:first-child:after {
   content: none;
 }
-
-.barra-progreso-opcion.barra-progreso-opcion-activo:before {
+.barra-progreso-opcion.barra-progreso-opcion-completado:before{
   content: '✓';
+}
+.barra-progreso-opcion.barra-progreso-opcion-completado:before,
+.barra-progreso-opcion.barra-progreso-opcion-completado:after {
+  background-color: #0075b5;
+  color: white;
+}
+
+.barra-progreso-opcion:first-child:after {
+  content: none;
 }
 
 .barra-progreso-opcion.barra-progreso-opcion-activo:before, 
 .barra-progreso-opcion.barra-progreso-opcion-activo:after {
-  background-color: #0075b5;
+  background-color: #1ba4b5;
   color: white;
 }
 
 .contenedor-titulo-barra-progreso {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: bold;
+  color: black;
   margin-top: 1rem;
   text-transform: uppercase;
   user-select: none;
@@ -241,10 +308,81 @@ body {
   font-size: .9rem;
 }
 
+@font-face {
+  font-family: arsenal;
+  src: url(fuentes/Arsenal-Regular.ttf);
+}
+
 /* Mensaje de Bienvenida tipo solicitud */
-.mensaje-bienvenida h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.mensaje-bienvenida .contenedor-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.mensaje-bienvenida .logo, img{
+  width: 18rem;
+  user-drag: none !important;
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-user-select: none !important;
+  pointer-events: none;
+}
+
+.mensaje-bienvenida div h5 {
+  font-size: 1rem;
+}
+
+.mensaje-bienvenida .card {
+  text-align: justify;
+  font-family: arsenal;
+  font-size: .8rem;
+  padding: 0;
+  margin-bottom: 1.2rem;
+  cursor: default;
+}
+
+.mensaje-bienvenida .card .card-header{
+  padding-top: .4rem !important;
+  padding-bottom: .2rem !important;
+}
+
+.mensaje-bienvenida .card .card-body {
+  background-color: #e8e6e6;
+}
+
+.mensaje-bienvenida .card {
+  box-shadow: 0 0 4px rgb(51, 49, 49);
+}
+
+.mensaje-bienvenida .caja-bienvenida-reincorporacion .card-header{
+  background-color: #146306;
+  color: white;
+}
+.mensaje-bienvenida .caja-bienvenida-suspension .card-header{
+  background-color: #ccbd00;
+  color: black;
+}
+.mensaje-bienvenida .caja-bienvenida-renuncia .card-header{
+  background-color: #8a0f04;
+  color: white;
+}
+
+.mensaje-bienvenida p, .mensaje-bienvenida ul{
+  text-align: justify;
+  line-height: .9rem;
+  font-size: .9rem;
+}
+
+.mensaje-bienvenida .destacado {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mensaje-bienvenida .remitente {
+  margin-top: 1.4rem;
+  font-style: italic;
 }
 
 .icono-subapartado {
@@ -264,6 +402,8 @@ body {
   font-size: .8rem;
   height: 6rem;
   resize: none;
+  font-family: inherit;
+  padding: .8rem;
 }
 
 .form-switch label, .form-switch .form-check-input{
@@ -283,7 +423,93 @@ body {
   color: red;
 }
 
-.mensaje-confirmacion p, .mensaje-confirmacion li{
-  text-align: justify;
-  font-size: .8rem;
+.negrita {
+  font-weight: bold;
+}
+
+/* Botones*/
+.boton {
+  padding: .4rem 1rem;
+  font-size: .9rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 0;
+}
+
+.boton-rojo {
+  background-color: #ca150c;
+  color: white;
+  transition: all .3s ease;
+}
+
+.boton-rojo:hover{
+  background-color: #d6180e;
+  box-shadow: 0 0 12px #d6180e;
+}
+
+.boton-chico {
+  padding: .3rem 1rem;
+  font-size: .7rem;
+}
+
+.boton-azul {
+  background-color: #0b66d6;
+  color: white;
+  transition: all .3s ease;
+}
+
+.boton-azul:hover{
+  background-color: #1175f0;
+  box-shadow: 0 0 12px #1175f0;
+}
+
+.boton-verde {
+  background-color: #0f7506;
+  color: white;
+  transition: all .3s ease;
+}
+
+.boton-verde:hover{
+  background-color: #0e8a03;
+  box-shadow: 0 0 12px #0e8a03;
+}
+
+.boton-amarillo {
+  background-color: #edc505;
+  color: black;
+  transition: all .3s ease;
+}
+
+.boton-amarillo:hover{
+  background-color: #fad107;
+  box-shadow: 0 0 12px #fad107;
+}
+
+/*Mensaje Bienestar Estudiantil*/
+.mensaje-bienestar .logo{
+  width: 20rem;
+}
+
+.centrar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mensaje-bienestar .contenedor-imagenes-formulario-beneficios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0rem 0;
+}
+
+.mensaje-bienestar .contenedor-imagenes-formulario-beneficios img{
+  width: 13rem;
+  box-shadow: 0 0 .3rem black;
+  margin: .3rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.logo-uct img{
+  width: 9rem !important;
 }
