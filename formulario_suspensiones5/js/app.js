@@ -86,6 +86,72 @@ function cambiarPaso(boton){
   }, 900)
 }
 
+function actualizaMotivos(idComboSeleccionado, idComboModificable){
+  // Se bloquea el combo modificable
+  $("#"+idComboModificable).attr("disabled", true);
+  let reseteoOption = "<option value='-1' selected>Seleccionar motivo...</option>";
+  $("#"+idComboModificable).html(reseteoOption)
+
+  $.ajax({
+    url: "php/desplegables.php",
+    method: "POST",
+    data: {
+      accion: "motivosDetallados",
+      id_motivo: idComboSeleccionado
+    },
+    success: function(respuesta){
+      let nuevosOption = "<option value='-1' selected>Seleccionar motivo...</option>";
+
+      let contador = 0;
+      Object.values(JSON.parse(respuesta)).forEach(motivo => {
+        nuevosOption += "<option value='"+motivo.id+"'>"+motivo.nombre+"</option>";
+        contador++;
+      })
+      
+      if (contador>0){
+        $("#"+idComboModificable).attr("disabled", false);
+      }else {
+        $("#"+idComboModificable).attr("disabled", true);
+      }
+      $("#"+idComboModificable).html(nuevosOption);
+    }
+  })
+}
+
+function eliminarMotivo(boton){
+  alert("hola");
+  console.log(boton.closest("tr"));
+}
+
+function agregarMotivosTabla(idMotivo, idMotivoDetallado, idTabla){
+  let valorMotivo          = $("#"+idMotivo).val();
+  let valorMotivoDetallado = $("#"+idMotivoDetallado).val();
+
+
+  if(parseInt(valorMotivo)!==-1 && parseInt(valorMotivoDetallado)!==-1){
+    let motivo = $("#"+idMotivo+" option:selected").text();
+    let motivoDetallado = $("#"+idMotivoDetallado+" option:selected").text();
+    let tablaMotivos = $("#"+idTabla+" tbody");
+
+    // Se eliminan los espaciados del cuerpo y se analiza si la lista esta vacia
+    let contenidoLista = tablaMotivos.html().replace(/\s+/g,"")==="<tr><td></td><td></td><td></td></tr>"?"":tablaMotivos.html();
+
+    contenidoLista += `<tr>
+                        <td style='width:7rem'>${motivo}</td>
+                        <td>${motivoDetallado}</td>
+                        <td style='width:7rem'>
+                          <button class='boton boton-rojo boton-chico' type='button'>
+                            <i class="fa-solid fa-xmark boton-quitar-motivo"></i> Quitar
+                          </button>
+                        </td>
+                      </tr>`;
+    tablaMotivos.html(contenidoLista);
+    
+    // Si se preciona el boton de quitar motivo
+    $("main").on("click",".boton-quitar-motivo",function(){eliminarMotivo($(this))});
+  }
+}
+
 $(document).ready(function(){
   // Selecciones Estarán Ocultas
   $(".seleccion-tipo-solicitud").hide();
@@ -99,9 +165,18 @@ $(document).ready(function(){
   $("#seleccion-renuncia #suspension-beneficios1").hide();
   $("#seleccion-renuncia #suspension-confirmacion1").hide();
 
+  // Se dejan los motivos detallados como desactivados
+  $("#input-motivo-detallado-suspension1").attr("disabled", true);
+
   // Se visualiza la solicitud deseada
   $(".btn-solicitud").click(function(){seleccionaTipoSolicitud($(this))});
 
   // Se intercambia de paso dependiendo de lo que se presionó
   $(".boton-secuencia").click(function(){cambiarPaso($(this))});
+
+  // Se actualizan los motivos
+  $("#input-motivo-suspension1").change(function(){actualizaMotivos($(this).val(), "input-motivo-detallado-suspension1")});
+
+  // Si se presiona el boton de agregar 
+  $("#boton-agregar-motivo-suspension1").click(function(){agregarMotivosTabla("input-motivo-suspension1", "input-motivo-detallado-suspension1", "tabla-motivos-suspensiones1")});
 })

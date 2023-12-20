@@ -114,22 +114,19 @@ body {
 .tabla-institucional {
   text-align: center;
 }
+
+.table td, .table th {
+  border: 1px solid #918d8d !important;
+}
+
 .tabla-institucional th{
-  background-color: #0075b5 !important;
+  background-color: #0076b5cc !important;
   color: white !important;
   text-transform: uppercase;
   font-size: .77rem;
 }
 .tabla-institucional td, .tabla-institucional tbody{
   font-size: .8rem;
-}
-
-.tabla-institucional tr:nth-child(odd) td{
-  background-color: #f5f5f5dc;
-}
-
-.tabla-institucional tr:nth-child(even) td{
-  background-color: #ffffffff;
 }
 
 .tabla-info-academica {
